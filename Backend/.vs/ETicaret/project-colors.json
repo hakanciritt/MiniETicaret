@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1edaa278-7471-43d2-b2f3-8b2877a60acd": {
+      "ProjectGuid": "1edaa278-7471-43d2-b2f3-8b2877a60acd",
+      "DisplayName": "ETicaret.Domain",
+      "ColorIndex": 0
+    },
+    "79635ab5-4c7e-4b70-87eb-c62330f4d032": {
+      "ProjectGuid": "79635ab5-4c7e-4b70-87eb-c62330f4d032",
+      "DisplayName": "ETicaret.Application",
+      "ColorIndex": 1
+    },
+    "ceab39b0-e2bb-4e98-80a3-436b94ff55f1": {
+      "ProjectGuid": "ceab39b0-e2bb-4e98-80a3-436b94ff55f1",
+      "DisplayName": "ETicaret.Infrastructure",
+      "ColorIndex": 2
+    },
+    "834dc83b-7048-42c8-9da0-ada3f6b171ed": {
+      "ProjectGuid": "834dc83b-7048-42c8-9da0-ada3f6b171ed",
+      "DisplayName": "ETicaret.Persistence",
+      "ColorIndex": 3
+    },
+    "bac6dd74-f5da-4808-8da7-ed2c566e1f92": {
+      "ProjectGuid": "bac6dd74-f5da-4808-8da7-ed2c566e1f92",
+      "DisplayName": "ETicaret.API",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

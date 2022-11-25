@@ -1,0 +1,17 @@
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\bin\Debug\net6.0\SignalR.deps.json
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\bin\Debug\net6.0\SignalR.dll
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\bin\Debug\net6.0\SignalR.pdb
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\bin\Debug\net6.0\ETicaret.Application.dll
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\bin\Debug\net6.0\ETicaret.Domain.dll
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\bin\Debug\net6.0\ETicaret.Application.pdb
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\bin\Debug\net6.0\ETicaret.Domain.pdb
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.csproj.AssemblyReference.cache
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.AssemblyInfoInputs.cache
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.AssemblyInfo.cs
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.csproj.CoreCompileInputs.cache
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.csproj.CopyComplete
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.dll
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\refint\SignalR.dll
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\SignalR.pdb
+C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\SignalR\obj\Debug\net6.0\ref\SignalR.dll
