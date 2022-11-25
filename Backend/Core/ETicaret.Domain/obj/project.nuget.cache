@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a5T6QuWEBjKJcBSxB9nbDVUulooGiUe5mdozw7jpLg9csXDCM9amiRhWMogcwUXKIUPPK1Me9yecSJcG0UvJTg==",
+  "dgSpecHash": "9PFwCGV9R7qrwdkPumtFPpU0MW1opbdH7EYdgkd2Tehvgb3RW3UWmH85Til3HfPpO0uz8+Hz5WTiz5gr+MmMng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj",
+  "projectFilePath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

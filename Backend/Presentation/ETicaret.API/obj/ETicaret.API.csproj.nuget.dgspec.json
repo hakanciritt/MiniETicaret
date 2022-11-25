@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Presentation\\ETicaret.API\\ETicaret.API.csproj": {}
+    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Presentation\\ETicaret.API\\ETicaret.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
+    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj",
         "projectName": "ETicaret.Application",
-        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj",
+        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj"
               }
             }
           }
@@ -79,7 +79,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -88,18 +89,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj": {
+    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj",
         "projectName": "ETicaret.Domain",
-        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj",
+        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Domain\\ETicaret.Domain.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Domain\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,7 +144,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -152,18 +154,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj": {
+    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj",
         "projectName": "ETicaret.Infrastructure",
-        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -180,11 +182,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
               },
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj"
               }
             }
           }
@@ -210,7 +212,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -219,18 +222,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj": {
+    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj",
         "projectName": "ETicaret.Persistence",
-        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj",
+        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -247,8 +250,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
               }
             }
           }
@@ -296,7 +299,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -305,18 +309,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\SignalR\\SignalR.csproj": {
+    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\SignalR\\SignalR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\SignalR\\SignalR.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\SignalR\\SignalR.csproj",
         "projectName": "SignalR",
-        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\SignalR\\SignalR.csproj",
+        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\SignalR\\SignalR.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\SignalR\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\SignalR\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -333,8 +337,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
               }
             }
           }
@@ -354,7 +358,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -366,18 +371,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Presentation\\ETicaret.API\\ETicaret.API.csproj": {
+    "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Presentation\\ETicaret.API\\ETicaret.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Presentation\\ETicaret.API\\ETicaret.API.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Presentation\\ETicaret.API\\ETicaret.API.csproj",
         "projectName": "ETicaret.API",
-        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Presentation\\ETicaret.API\\ETicaret.API.csproj",
+        "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Presentation\\ETicaret.API\\ETicaret.API.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Presentation\\ETicaret.API\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Presentation\\ETicaret.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -394,17 +399,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Core\\ETicaret.Application\\ETicaret.Application.csproj"
               },
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Infrastructure\\ETicaret.Infrastructure.csproj"
               },
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\ETicaret.Persistence\\ETicaret.Persistence.csproj"
               },
-              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\SignalR\\SignalR.csproj": {
-                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Infrastructure\\SignalR\\SignalR.csproj"
+              "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\SignalR\\SignalR.csproj": {
+                "projectPath": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Infrastructure\\SignalR\\SignalR.csproj"
               }
             }
           }
@@ -452,7 +457,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -464,7 +470,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
