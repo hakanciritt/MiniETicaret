@@ -1,5 +1,7 @@
 ﻿using System.Security.Claims;
+using ETicaret.Application.Exceptions;
 using ETicaret.Application.Repositories.Basket;
+using ETicaret.Application.Repositories.BasketItem;
 using ETicaret.Application.Repositories.OrderRepository;
 using ETicaret.Application.ViewModels.Baskets;
 using ETicaret.Domain.Entities;
@@ -15,43 +17,99 @@ namespace ETicaret.Application.Abstractions.Services
         private readonly UserManager<AppUser> _userManager;
         private readonly IOrderReadRepository _orderReadRepository;
         private readonly IBasketWriteRepository _basketWriteRepository;
+        private readonly IBasketReadRepository _basketReadRepository;
+        private readonly IBasketItemReadRepository _basketItemReadRepository;
+        private readonly IBasketItemWriteRepository _basketItemWriteRepository;
 
-        public BasketService(IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager, IOrderReadRepository orderReadRepository,IBasketWriteRepository basketWriteRepository)
+        public BasketService(IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager,
+            IOrderReadRepository orderReadRepository,
+            IBasketWriteRepository basketWriteRepository,
+            IBasketReadRepository basketReadRepository,
+            IBasketItemReadRepository basketItemReadRepository,
+            IBasketItemWriteRepository basketItemWriteRepository)
         {
             _httpContextAccessor = httpContextAccessor;
             _userManager = userManager;
             _orderReadRepository = orderReadRepository;
             _basketWriteRepository = basketWriteRepository;
+            _basketReadRepository = basketReadRepository;
+            _basketItemReadRepository = basketItemReadRepository;
+            _basketItemWriteRepository = basketItemWriteRepository;
         }
-        public Task<List<BasketItem>> GetAllBasketItemAsync()
+        public async Task<List<BasketItem>> GetAllBasketItemAsync()
         {
+            var basket = await ContextUser();
 
-            throw new NotImplementedException();
+            var userBasket = await _basketReadRepository.DbSet.
+                Include(d => d.BasketItems)
+                    .ThenInclude(d => d.Product)
+                .FirstOrDefaultAsync(d => d.Id == basket.Id);
+
+            return userBasket.BasketItems.ToList();
+
         }
 
-        public Task AddItemToBasketItemAsync(CreateBasketItem basketItem)
+        public async Task AddItemToBasketItemAsync(CreateBasketItem basketItem)
         {
-            throw new NotImplementedException();
+            var basket = await ContextUser();
+
+            if (basket != null)
+            {
+                BasketItem? checkProduct = await _basketItemReadRepository.GetSingleAsync(d =>
+                    d.BasketId == basket.Id && d.ProductId == basketItem.ProductId);
+
+                if (checkProduct is not null)
+                {
+                    checkProduct.Quantity++;
+
+                }
+                else
+                {
+                    await _basketItemWriteRepository.AddAsync(new()
+                    {
+                        BasketId = basket.Id,
+                        ProductId = basketItem.ProductId,
+                        Quantity = basketItem.Quantity
+
+                    });
+                }
+
+                await _basketItemWriteRepository.SaveAsync();
+
+            }
         }
 
-        public Task UpdateQuantityAsync(UpdateBasketItem basketItem)
+        public async Task UpdateQuantityAsync(UpdateBasketItem basketItem)
         {
-            throw new NotImplementedException();
+            BasketItem? item = await _basketItemReadRepository.GetByIdAsync(basketItem.BasketItemId);
+            if (item != null)
+            {
+                item.Quantity = basketItem?.Quantity ?? 0;
+                await _basketItemWriteRepository.SaveAsync();
+            }
+
         }
 
-        public Task RemoveBasketItemAsync(string basketItemId)
+        public async Task RemoveBasketItemAsync(string basketItemId)
         {
-            throw new NotImplementedException();
+            BasketItem? basketItem = await _basketItemReadRepository.GetByIdAsync(basketItemId);
+            if (basketItem != null)
+            {
+                _basketItemWriteRepository.Remove(basketItem);
+                await _basketItemWriteRepository.SaveAsync();
+            }
         }
 
-        private async Task<AppUser?> ContextUser()
+        private async Task<Basket?> ContextUser()
         {
             var userId = _httpContextAccessor?.HttpContext?.User?.Claims?
                 .FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
 
             if (!string.IsNullOrEmpty(userId))
             {
-                var user = await _userManager.Users.Include(c => c.Baskets).FirstOrDefaultAsync(d => d.Id == userId);
+                var user = await _userManager.Users.Include(c => c.Baskets)
+                    .FirstOrDefaultAsync(d => d.Id == userId);
+
                 var userBasket = from basket in user?.Baskets
                                  join order in _orderReadRepository.DbSet
                                      on basket.Id equals order.Id into basketOrders
@@ -61,17 +119,20 @@ namespace ETicaret.Application.Abstractions.Services
                 Basket? targetBasket = null;
                 if (userBasket.Any(d => d.Order is null))
                 {
-                    targetBasket = userBasket.FirstOrDefault(c => c.Order is null).Basket;
+                    targetBasket = userBasket?.FirstOrDefault(c => c.Order is null)?.Basket;
                 }
                 else
                 {
-                    user.Baskets.Add(new());
+                    targetBasket = new();
+                    user.Baskets.Add(targetBasket);
 
                 }
-                //_basketWriteRepository.Update( )
+
+                await _basketWriteRepository.SaveAsync();
+                return targetBasket;
             }
 
-            return null;
+            throw new UserFriendlyException("kullanıcı bulunamadı.");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ETicaret.Application.Abstractions.Services;
+using ETicaret.Application.Abstractions.Services.Authentications;
 using ETicaret.Application.Repositories;
 using ETicaret.Application.Repositories.Basket;
 using ETicaret.Application.Repositories.BasketItem;
@@ -52,6 +53,11 @@ namespace ETicaret.Persistence
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
+
+            services.AddScoped<IExternalAuthentication, AuthService>();
+            services.AddScoped<IInternalAuthentication, AuthService>();
+
+            services.AddScoped<IBasketService, BasketService>();
 
             services.AddIdentity<AppUser, AppRole>(options =>
                 {
