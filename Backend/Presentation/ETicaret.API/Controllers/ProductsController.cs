@@ -103,7 +103,7 @@ namespace ETicaret.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("[acton]")]
+        [HttpGet("[action]")]
         [Authorize(AuthenticationSchemes = Schemes.AdminScheme)]
         public async Task<IActionResult> ChangeShowcaseImage([FromQuery] ChangeShowcaseImageCommandRequest request)
         {

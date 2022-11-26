@@ -24,6 +24,7 @@ namespace ETicaret.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>().HasKey(d => d.Id);
+
             builder.Entity<Basket>()
                 .HasOne(c => c.Order)
                 .WithOne(c => c.Basket)

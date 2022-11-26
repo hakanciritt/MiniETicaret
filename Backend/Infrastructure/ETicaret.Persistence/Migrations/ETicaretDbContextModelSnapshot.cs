@@ -75,7 +75,6 @@ namespace ETicaret.Persistence.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NameSurname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")

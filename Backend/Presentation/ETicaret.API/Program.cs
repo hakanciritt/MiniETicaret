@@ -66,7 +66,7 @@ builder.Services.AddHttpLogging(logging =>
 builder.Services.AddStorage<LocalStorage>();
 
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
-    policy.WithOrigins("http://localhost:4201", "https://localhost:4201")
+    policy.WithOrigins("http://localhost:4201", "https://localhost:4201", "https://localhost:4200", "http://localhost:4200")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials()));

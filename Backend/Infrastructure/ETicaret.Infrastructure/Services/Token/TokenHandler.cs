@@ -39,7 +39,7 @@ namespace ETicaret.Infrastructure.Services.Token
                 signingCredentials: credentials
             );
             //not before bu token üretildiği anda devreye girsin demiş olduk bu süreyi manupule edebiliriz
-
+            
             //token oluşturucu sınıfından bir örnek alalım burada 
 
             JwtSecurityTokenHandler tokenHandler = new();

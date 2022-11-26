@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v2N2dq6RBJBLn1tmwDX8Yxa/gZrwFK45TMwiwwvxNXo=",
+  "Hash": "IDyCyowYnxLfna9cdbWZW+fgVIcApAsTumkoVZam8A0=",
   "Source": "ETicaret.API",
   "BasePath": "_content/ETicaret.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "ETicaret.API\\wwwroot",
       "Source": "ETicaret.API",
-      "ContentRoot": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\ETicaretUygulamasi\\ETicaret\\Presentation\\ETicaret.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hakan\\OneDrive\\Masaüstü\\MiniETicaret\\Backend\\Presentation\\ETicaret.API\\wwwroot\\",
       "BasePath": "_content/ETicaret.API",
       "Pattern": "**"
     }
