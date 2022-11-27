@@ -51,26 +51,30 @@ export class UserAuthService {
 
     callBackFunction();
   }
-  async refreshTokenLogin(refreshToken: string, callBackFunction?: () => void): Promise<any> {
+  async refreshTokenLogin(refreshToken: string, callBackFunction?: (state) => void): Promise<any> {
     const observable: Observable<any | TokenResponse> = this.httpClientService.post({
       action: "refreshTokenLogin",
       controller: "auth"
 
     }, { refreshToken: refreshToken })
     const tokenResponse: TokenResponse = await firstValueFrom(observable);
+    try {
+      if (tokenResponse) {
+        localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+        localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
 
-    if (tokenResponse) {
-      localStorage.setItem("accessToken", tokenResponse.token.accessToken);
-      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
+        this.toastrService.message("Google üzerinden giriş başarıyla sağlanmıştır.", "Giriş Başarılı", {
+          messageType: ToastrMessageType.Success,
+          position: ToastrPosition.TopRight
+        });
 
-      this.toastrService.message("Google üzerinden giriş başarıyla sağlanmıştır.", "Giriş Başarılı", {
-        messageType: ToastrMessageType.Success,
-        position: ToastrPosition.TopRight
-      });
-
-    } else {
-      callBackFunction();
+      } else {
+        callBackFunction(tokenResponse ? true : false);
+      }
+    } catch (error) {
+      callBackFunction(false);
     }
+
   }
 
   async facebookLogin(user: SocialUser, callBackFunction?: () => void): Promise<any> {

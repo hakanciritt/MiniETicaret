@@ -41,7 +41,7 @@ namespace ETicaret.API.Controllers
             return Ok(await _mediator.Send(request));
         }
 
-        [HttpDelete]
+        [HttpDelete("{BasketItemId}")]
         public async Task<IActionResult> RemoveBasketItem(RemoveBasketItemCommandRequest request)
         {
             return Ok(await _mediator.Send(request));
