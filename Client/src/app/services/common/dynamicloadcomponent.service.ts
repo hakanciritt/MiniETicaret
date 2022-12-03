@@ -1,23 +1,22 @@
-import { Component, ComponentFactoryResolver, Injectable, ViewContainerRef } from '@angular/core';
-import { BaseComponent } from 'src/app/base/base.component';
+import { Injectable, ViewContainerRef } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DynamicloadcomponentService {
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
+  constructor() { }
 
-  async loadComponent(component : Components , viewContainerRef : ViewContainerRef) {
-    let _component : any = null;
+  async loadComponent(component: Components, viewContainerRef: ViewContainerRef) {
+    let _component: any = null;
 
     switch (component) {
       case Components.BasketsComponent:
-       _component = (await import("../../ui/components/baskets/baskets.component")).BasketsComponent;
-      break;
+        _component = (await import("../../ui/components/baskets/baskets.component")).BasketsComponent;
+        break;
     }
     viewContainerRef.clear();
-    return viewContainerRef.createComponent(this.componentFactoryResolver.resolveComponentFactory(_component));
+    return viewContainerRef.createComponent(_component);
   }
 
 }
