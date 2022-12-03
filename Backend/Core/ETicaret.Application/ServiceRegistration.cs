@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ETicaret.Application.UserSession;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ETicaret.Application
@@ -7,6 +8,7 @@ namespace ETicaret.Application
     {
         public static void AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<IUserSession, UserSession.UserSession>();
             services.AddMediatR(typeof(ServiceRegistration));
         }
     }

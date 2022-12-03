@@ -10558,3 +10558,335 @@ ORDER BY [t].[Id], [t0].[Id]
 2022-12-03 22:30:47.314 +03:00 [INF] Executed action ETicaret.API.Controllers.BasketsController.GetBasketItems (ETicaret.API) in 75.7409ms
 2022-12-03 22:30:47.320 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.BasketsController.GetBasketItems (ETicaret.API)'
 2022-12-03 22:30:47.323 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/baskets - - - 200 - application/json;+charset=utf-8 92.7663ms
+2022-12-03 22:43:51.057 +03:00 [INF] Executed endpoint '/products-hub'
+2022-12-03 22:43:51.151 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7145/products-hub?id=Yc3lt9pvLhjgVo1hOg4O6A - - - 101 - - 844401.4426ms
+2022-12-03 22:43:53.443 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:43:53.450 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:43:53.453 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - - - 204 - - 10.0244ms
+2022-12-03 22:43:53.461 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:43:53.464 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:43:53.480 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:43:53.491 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-03 22:43:53.527 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 22:43:54.353 +03:00 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-03 22:43:54.373 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-03 22:43:54.378 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-03 22:43:54.388 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 894.2573ms
+2022-12-03 22:43:54.391 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:43:54.393 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - - - 200 - application/json;+charset=utf-8 931.4025ms
+2022-12-03 22:43:56.461 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:43:56.463 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:43:56.468 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:43:56.470 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-03 22:43:56.475 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 22:43:56.484 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-03 22:43:56.492 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-03 22:43:56.497 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-03 22:43:56.501 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 27.4277ms
+2022-12-03 22:43:56.504 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:43:56.507 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - - - 200 - application/json;+charset=utf-8 45.7778ms
+2022-12-03 22:43:59.662 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:43:59.664 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:43:59.666 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - - - 204 - - 4.2624ms
+2022-12-03 22:43:59.675 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:43:59.676 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:43:59.678 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:43:59.681 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-03 22:43:59.687 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 22:43:59.693 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-03 22:43:59.702 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-03 22:43:59.707 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-03 22:43:59.710 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 24.617ms
+2022-12-03 22:43:59.712 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:43:59.716 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - - - 200 - application/json;+charset=utf-8 41.2494ms
+2022-12-03 22:44:02.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:44:02.920 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:44:02.922 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:44:02.923 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-03 22:44:02.927 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 22:44:02.932 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-03 22:44:02.943 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-03 22:44:02.947 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-03 22:44:02.949 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 23.285ms
+2022-12-03 22:44:02.951 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:44:02.952 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - - - 200 - application/json;+charset=utf-8 33.3183ms
+2022-12-03 22:45:40.862 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:45:40.864 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:45:40.872 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - - - 204 - - 9.9951ms
+2022-12-03 22:45:40.884 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:45:40.885 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:45:40.898 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-12-03 22:45:40.947 +03:00 [INF] AdminScheme was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2022-12-03 22:45:40.950 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:45:40.951 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-03 22:45:40.956 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 22:45:40.962 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-03 22:45:40.969 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-03 22:45:40.972 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-03 22:45:40.974 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 19.7379ms
+2022-12-03 22:45:40.975 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:45:40.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - - - 200 - application/json;+charset=utf-8 93.2080ms
+2022-12-03 22:45:47.992 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:45:47.993 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:45:47.994 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=12 - - - 204 - - 2.1534ms
+2022-12-03 22:45:48.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:45:48.003 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:45:48.005 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-12-03 22:45:48.008 +03:00 [INF] AdminScheme was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2022-12-03 22:45:48.010 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:45:48.011 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-03 22:45:48.014 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 22:45:48.021 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-03 22:45:48.025 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-03 22:45:48.028 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-03 22:45:48.029 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 16.3591ms
+2022-12-03 22:45:48.031 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:45:48.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - - - 200 - application/json;+charset=utf-8 31.1609ms
+2022-12-03 22:45:49.273 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - -
+2022-12-03 22:45:49.298 +03:00 [INF] CORS policy execution successful.
+2022-12-03 22:45:49.303 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-12-03 22:45:49.309 +03:00 [INF] AdminScheme was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2022-12-03 22:45:49.311 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:45:49.314 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-03 22:45:49.321 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 22:45:49.326 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-03 22:45:49.331 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-03 22:45:49.336 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-03 22:45:49.346 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 26.4559ms
+2022-12-03 22:45:49.375 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-03 22:45:49.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=12 - - - 200 - application/json;+charset=utf-8 104.4081ms
+2022-12-03 23:21:57.914 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:21:57.955 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:21:58.152 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:21:58.194 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:21:58.194 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:22:11.183 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:22:11.218 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:22:11.421 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:22:11.472 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:22:11.546 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:22:11.551 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:22:11.552 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:22:11.583 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-03 23:22:11.610 +03:00 [INF] Applying migration '20221203202158_removedCustomerAndOrderBetweenRelation'.
+2022-12-03 23:22:11.848 +03:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Orders] DROP CONSTRAINT [FK_Orders_Customers_CustomerId];
+2022-12-03 23:22:12.648 +03:00 [INF] Executed DbCommand (796ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Orders]') AND [c].[name] = N'CustomerId');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Orders] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Orders] ALTER COLUMN [CustomerId] uniqueidentifier NULL;
+2022-12-03 23:22:12.652 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Orders] ADD CONSTRAINT [FK_Orders_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]);
+2022-12-03 23:22:12.664 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221203202158_removedCustomerAndOrderBetweenRelation', N'6.0.4');
+2022-12-03 23:27:45.698 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:27:45.722 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:27:45.872 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:27:45.913 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:27:45.914 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:27:57.040 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:27:57.058 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:27:57.203 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:27:57.252 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:27:57.278 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:27:57.280 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:27:57.281 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:27:57.298 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-03 23:27:57.314 +03:00 [INF] Applying migration '20221203202746_removedColumns'.
+2022-12-03 23:27:57.403 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE [OrderProduct];
+2022-12-03 23:27:57.407 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221203202746_removedColumns', N'6.0.4');
+2022-12-03 23:28:59.040 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:28:59.067 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:28:59.238 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:28:59.287 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:28:59.287 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:29:14.900 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:29:14.918 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:29:15.094 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:29:15.148 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:29:15.170 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:29:15.173 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:29:15.174 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:29:15.186 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-03 23:29:15.201 +03:00 [INF] Applying migration '20221203202859_updateNullableColumns'.
+2022-12-03 23:29:15.268 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Baskets] DROP CONSTRAINT [FK_Baskets_AspNetUsers_UserId];
+2022-12-03 23:29:15.297 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Orders]') AND [c].[name] = N'Description');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Orders] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Orders] ALTER COLUMN [Description] nvarchar(max) NULL;
+2022-12-03 23:29:15.318 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Orders]') AND [c].[name] = N'Address');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [Orders] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [Orders] ALTER COLUMN [Address] nvarchar(max) NULL;
+2022-12-03 23:29:15.390 +03:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var2 sysname;
+SELECT @var2 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Baskets]') AND [c].[name] = N'UserId');
+IF @var2 IS NOT NULL EXEC(N'ALTER TABLE [Baskets] DROP CONSTRAINT [' + @var2 + '];');
+ALTER TABLE [Baskets] ALTER COLUMN [UserId] nvarchar(450) NULL;
+2022-12-03 23:29:15.408 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Baskets] ADD CONSTRAINT [FK_Baskets_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]);
+2022-12-03 23:29:15.411 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221203202859_updateNullableColumns', N'6.0.4');
+2022-12-03 23:31:27.646 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:31:27.672 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:31:27.858 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:31:27.909 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:31:27.909 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:31:37.094 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:31:37.112 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:31:37.255 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:31:37.300 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:31:37.370 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:31:37.372 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:31:37.373 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:31:37.408 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-03 23:31:37.424 +03:00 [INF] Applying migration '20221203203128_addedFKColumnsBasketAndOrderTable'.
+2022-12-03 23:31:37.623 +03:00 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Orders] ADD [BasketId] uniqueidentifier NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000';
+2022-12-03 23:31:37.639 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Baskets] ADD [OrderId] uniqueidentifier NULL;
+2022-12-03 23:31:37.642 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221203203128_addedFKColumnsBasketAndOrderTable', N'6.0.4');
+2022-12-03 23:32:23.757 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:32:23.788 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:32:23.975 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:32:24.026 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:32:24.026 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:32:44.948 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:32:44.974 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-03 23:32:45.163 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-03 23:32:45.210 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:32:45.241 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:32:45.245 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-03 23:32:45.246 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-03 23:32:45.272 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-03 23:32:45.299 +03:00 [INF] Applying migration '20221203203224_removedOrdersRelationFromCustomerTable'.
+2022-12-03 23:32:45.385 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Orders] DROP CONSTRAINT [FK_Orders_Customers_CustomerId];
+2022-12-03 23:32:45.399 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX [IX_Orders_CustomerId] ON [Orders];
+2022-12-03 23:32:45.446 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Orders]') AND [c].[name] = N'CustomerId');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Orders] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Orders] DROP COLUMN [CustomerId];
+2022-12-03 23:32:45.448 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221203203224_removedOrdersRelationFromCustomerTable', N'6.0.4');

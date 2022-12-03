@@ -29,7 +29,7 @@ namespace ETicaret.Application.Features.Commands.Product.CreateProduct
             });
 
             await _productWriteRepository.SaveAsync();
-            await _productHubService.ProductAddedMessageAsync($"{request.Name} isminde ürün eklendmiştir.");
+            await _productHubService.ProductAddedMessageAsync($"{request.Name} isminde ürün eklenmiştir.");
 
             return new();
         }
