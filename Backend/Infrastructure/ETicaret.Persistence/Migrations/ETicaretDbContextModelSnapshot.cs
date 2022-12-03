@@ -234,12 +234,13 @@ namespace ETicaret.Persistence.Migrations
             modelBuilder.Entity("ETicaret.Domain.Entities.Order", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("BasketId")
+                    b.Property<Guid?>("BasketId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreateData")
@@ -252,6 +253,10 @@ namespace ETicaret.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BasketId")
+                        .IsUnique()
+                        .HasFilter("[BasketId] IS NOT NULL");
 
                     b.ToTable("Orders");
                 });
@@ -456,9 +461,7 @@ namespace ETicaret.Persistence.Migrations
                 {
                     b.HasOne("ETicaret.Domain.Entities.Basket", "Basket")
                         .WithOne("Order")
-                        .HasForeignKey("ETicaret.Domain.Entities.Order", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ETicaret.Domain.Entities.Order", "BasketId");
 
                     b.Navigation("Basket");
                 });

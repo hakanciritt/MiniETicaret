@@ -24,11 +24,12 @@ namespace ETicaret.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>().HasKey(d => d.Id);
+            builder.Entity<Basket>().HasKey(d => d.Id);
 
             builder.Entity<Basket>()
                 .HasOne(c => c.Order)
                 .WithOne(c => c.Basket)
-                .HasForeignKey<Order>(d => d.Id);
+                .HasForeignKey<Order>(d => d.BasketId);
 
             base.OnModelCreating(builder);
         }

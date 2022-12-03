@@ -24,7 +24,8 @@ namespace ETicaret.Persistence.Services
         }
         public async Task CreateOrder(CreateOrderDto createOrder)
         {
-            var userBasket = await _basketReadRepository.DbSet.FirstOrDefaultAsync(d => d.OrderId == null && d.UserId == _userSession.UserId );
+            var userBasket = await _basketReadRepository.DbSet.Include(d=>d.BasketItems)
+                .FirstOrDefaultAsync(d => d.OrderId == null && d.UserId == _userSession.UserId );
 
             if (userBasket == null) throw new UserFriendlyException("Kullanıcı sepeti bulunamadı.");
             
@@ -32,9 +33,10 @@ namespace ETicaret.Persistence.Services
             {
                 Address = createOrder.Address,
                 Description = createOrder.Description,
-                Basket = userBasket,
+                BasketId = userBasket.Id
             });
 
+            await _orderWriteRepository.SaveAsync();
 
         }
     }
