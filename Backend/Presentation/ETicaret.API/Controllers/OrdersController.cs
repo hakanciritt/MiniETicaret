@@ -3,7 +3,6 @@ using ETicaret.Application.Features.Commands.Order.CreateOrder;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
 
 namespace ETicaret.API.Controllers
 {

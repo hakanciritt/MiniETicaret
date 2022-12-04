@@ -26,11 +26,6 @@ namespace ETicaret.Persistence.Contexts
             builder.Entity<Order>().HasKey(d => d.Id);
             builder.Entity<Basket>().HasKey(d => d.Id);
 
-            builder.Entity<Basket>()
-                .HasOne(c => c.Order)
-                .WithOne(c => c.Basket)
-                .HasForeignKey<Order>(d => d.BasketId);
-
             base.OnModelCreating(builder);
         }
 

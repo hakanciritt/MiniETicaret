@@ -14,9 +14,9 @@ namespace ETicaret.Persistence.Services
         private readonly IBasketReadRepository _basketReadRepository;
         private readonly IUserSession _userSession;
 
-        public OrderService(IOrderWriteRepository orderWriteRepository, 
-            IBasketReadRepository basketReadRepository , 
-            IUserSession userSession )
+        public OrderService(IOrderWriteRepository orderWriteRepository,
+            IBasketReadRepository basketReadRepository,
+            IUserSession userSession)
         {
             _orderWriteRepository = orderWriteRepository;
             _basketReadRepository = basketReadRepository;
@@ -24,11 +24,12 @@ namespace ETicaret.Persistence.Services
         }
         public async Task CreateOrder(CreateOrderDto createOrder)
         {
-            var userBasket = await _basketReadRepository.DbSet.Include(d=>d.BasketItems)
-                .FirstOrDefaultAsync(d => d.OrderId == null && d.UserId == _userSession.UserId );
+            var userBasket = await _basketReadRepository.DbSet.Include(d => d.BasketItems)
+                    .FirstOrDefaultAsync(d =>
+                        d.BasketStatus == Domain.Enums.Status.Active && d.UserId == _userSession.UserId);
 
             if (userBasket == null) throw new UserFriendlyException("Kullanıcı sepeti bulunamadı.");
-            
+
             await _orderWriteRepository.AddAsync(new Domain.Entities.Order()
             {
                 Address = createOrder.Address,
@@ -36,8 +37,8 @@ namespace ETicaret.Persistence.Services
                 BasketId = userBasket.Id
             });
 
+            userBasket.BasketStatus = Domain.Enums.Status.Passive;
             await _orderWriteRepository.SaveAsync();
-
         }
     }
 }

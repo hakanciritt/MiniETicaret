@@ -28,8 +28,8 @@ namespace ETicaret.Application.Abstractions.Services
             IBasketWriteRepository basketWriteRepository,
             IBasketReadRepository basketReadRepository,
             IBasketItemReadRepository basketItemReadRepository,
-            IBasketItemWriteRepository basketItemWriteRepository , 
-            IUserSession userSession )
+            IBasketItemWriteRepository basketItemWriteRepository,
+            IUserSession userSession)
         {
             _httpContextAccessor = httpContextAccessor;
             _userManager = userManager;
@@ -103,30 +103,21 @@ namespace ETicaret.Application.Abstractions.Services
 
         private async Task<Basket?> ContextUser()
         {
-            string userId = _userSession.UserId;
+            string userId = _userSession.GetUserId;
 
             if (!string.IsNullOrEmpty(userId))
             {
-                var user = await _userManager.Users.Include(c => c.Baskets)
-                    .FirstOrDefaultAsync(d => d.Id == userId);
+                var userBasket = await _basketReadRepository.DbSet.FirstOrDefaultAsync(c => c.UserId == userId && c.BasketStatus == Domain.Enums.Status.Active);
 
-                var userBasket = from basket in user?.Baskets
-                                 join order in _orderReadRepository.DbSet
-                                     on basket.Id equals order.Id into basketOrders
-                                 from ba in basketOrders.DefaultIfEmpty()
-                                 select new { Basket = basket, Order = ba };
-
-                Basket? targetBasket;
-                if (userBasket.Any(d => d.Order is null))
+                if (userBasket is not null) return userBasket;
+                
+                Basket targetBasket = new()
                 {
-                    targetBasket = userBasket?.FirstOrDefault(c => c.Order is null)?.Basket;
-                }
-                else
-                {
-                    targetBasket = new();
-                    user.Baskets.Add(targetBasket);
-                }
+                    BasketStatus = Domain.Enums.Status.Active,
+                    UserId = userId,
+                };
 
+                await _basketWriteRepository.AddAsync(targetBasket);
                 await _basketWriteRepository.SaveAsync();
                 return targetBasket;
             }

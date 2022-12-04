@@ -1,4 +1,5 @@
 ﻿using ETicaret.Domain.Entities.Common;
+using ETicaret.Domain.Enums;
 
 namespace ETicaret.Domain.Entities
 {
@@ -6,9 +7,7 @@ namespace ETicaret.Domain.Entities
     {
         public string? UserId { get; set; }
         public AppUser User { get; set; }
-
-        public Guid? OrderId { get; set; }
-        public Order Order { get; set; }
+        public Status BasketStatus { get; set; }
         public ICollection<BasketItem> BasketItems { get; set; }
     }
 }
