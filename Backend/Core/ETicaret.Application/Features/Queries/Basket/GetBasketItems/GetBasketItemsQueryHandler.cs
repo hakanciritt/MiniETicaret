@@ -1,11 +1,5 @@
 ﻿using ETicaret.Application.Abstractions.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ETicaret.Application.Features.Queries.Basket.GetBasketItems
 {
