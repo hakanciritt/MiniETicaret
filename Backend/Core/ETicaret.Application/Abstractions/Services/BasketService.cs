@@ -42,12 +42,10 @@ namespace ETicaret.Application.Abstractions.Services
         }
         public async Task<List<BasketItem>> GetAllBasketItemAsync()
         {
-            var basket = await ContextUser();
-
             var userBasket = await _basketReadRepository.DbSet.
                 Include(d => d.BasketItems)
                     .ThenInclude(d => d.Product)
-                .FirstOrDefaultAsync(d => d.Id == basket.Id);
+                .FirstOrDefaultAsync(d => d.UserId == _userSession.GetUserId && d.BasketStatus == Domain.Enums.Status.Active);
 
             return userBasket.BasketItems.ToList();
 
@@ -55,20 +53,24 @@ namespace ETicaret.Application.Abstractions.Services
 
         public async Task AddItemToBasketItemAsync(CreateBasketItem basketItem)
         {
-            var basket = await ContextUser();
+            var basket = await GetBasketForUser();
 
             if (basket != null)
             {
+                var items = basket.BasketItems.ToList();
+
                 BasketItem? checkProduct = await _basketItemReadRepository.GetSingleAsync(d =>
                     d.BasketId == basket.Id && d.ProductId == basketItem.ProductId);
 
-                if (checkProduct is not null)
+                var productIsInBasket = items.FirstOrDefault(d => d.ProductId == basketItem.ProductId);
+
+                if (productIsInBasket != null)
                 {
-                    checkProduct.Quantity++;
+                    productIsInBasket.Quantity++;
                 }
                 else
                 {
-                    await _basketItemWriteRepository.AddAsync(new()
+                    basket.BasketItems.Add(new()
                     {
                         BasketId = basket.Id,
                         ProductId = basketItem.ProductId,
@@ -76,6 +78,7 @@ namespace ETicaret.Application.Abstractions.Services
 
                     });
                 }
+
                 await _basketItemWriteRepository.SaveAsync();
             }
         }
@@ -101,13 +104,14 @@ namespace ETicaret.Application.Abstractions.Services
             }
         }
 
-        private async Task<Basket?> ContextUser()
+        private async Task<Basket?> GetBasketForUser()
         {
             string userId = _userSession.GetUserId;
 
             if (!string.IsNullOrEmpty(userId))
             {
-                var userBasket = await _basketReadRepository.DbSet.FirstOrDefaultAsync(c => c.UserId == userId && c.BasketStatus == Domain.Enums.Status.Active);
+                var userBasket = await _basketReadRepository.DbSet.Include(c=>c.BasketItems)
+                    .FirstOrDefaultAsync(c => c.UserId == userId && c.BasketStatus == Domain.Enums.Status.Active);
 
                 if (userBasket is not null) return userBasket;
                 
