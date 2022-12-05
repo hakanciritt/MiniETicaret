@@ -3,6 +3,7 @@ using ETicaret.Application.Exceptions;
 using ETicaret.Application.Repositories.Basket;
 using ETicaret.Application.Repositories.BasketItem;
 using ETicaret.Application.Repositories.OrderRepository;
+using ETicaret.Application.Repositories.ProductRepository;
 using ETicaret.Application.UserSession;
 using ETicaret.Application.ViewModels.Baskets;
 using ETicaret.Domain.Entities;
@@ -22,6 +23,7 @@ namespace ETicaret.Application.Abstractions.Services
         private readonly IBasketItemReadRepository _basketItemReadRepository;
         private readonly IBasketItemWriteRepository _basketItemWriteRepository;
         private readonly IUserSession _userSession;
+        private readonly IProductReadRepository _productReadRepository;
 
         public BasketService(IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager,
             IOrderReadRepository orderReadRepository,
@@ -29,7 +31,7 @@ namespace ETicaret.Application.Abstractions.Services
             IBasketReadRepository basketReadRepository,
             IBasketItemReadRepository basketItemReadRepository,
             IBasketItemWriteRepository basketItemWriteRepository,
-            IUserSession userSession)
+            IUserSession userSession, IProductReadRepository productReadRepository)
         {
             _httpContextAccessor = httpContextAccessor;
             _userManager = userManager;
@@ -39,18 +41,33 @@ namespace ETicaret.Application.Abstractions.Services
             _basketItemReadRepository = basketItemReadRepository;
             _basketItemWriteRepository = basketItemWriteRepository;
             _userSession = userSession;
+            _productReadRepository = productReadRepository;
         }
         public async Task<List<BasketItem>> GetAllBasketItemAsync()
         {
-            var contextUser = await GetBasketForUser();
-            
-            var userBasket = await _basketReadRepository.DbSet.
-                Include(d => d.BasketItems)
+            bool checkBasket = await _basketReadRepository.DbSet.AnyAsync(c =>
+                c.UserId == _userSession.GetUserId && c.BasketStatus == Domain.Enums.Status.Active);
+
+            if (checkBasket)
+            {
+                var userBasket = await _basketReadRepository.DbSet.
+                    Include(d => d.BasketItems)
                     .ThenInclude(d => d.Product)
-                .FirstOrDefaultAsync(d => d.UserId == _userSession.GetUserId && d.BasketStatus == Domain.Enums.Status.Active && d.Id == contextUser.Id);
+                    .FirstOrDefaultAsync(d => d.UserId == _userSession.GetUserId && d.BasketStatus == Domain.Enums.Status.Active);
 
-            return userBasket.BasketItems.ToList();
+                return userBasket.BasketItems.ToList();
+            }
 
+            Basket targetBasket = new()
+            {
+                BasketStatus = Domain.Enums.Status.Active,
+                UserId = _userSession.GetUserId,
+                BasketItems = new List<BasketItem>()
+            };
+
+            await _basketWriteRepository.AddAsync(targetBasket);
+            await _basketWriteRepository.SaveAsync();
+            return targetBasket.BasketItems.ToList();
         }
 
         public async Task AddItemToBasketItemAsync(CreateBasketItem basketItem)
@@ -60,9 +77,11 @@ namespace ETicaret.Application.Abstractions.Services
             if (basket != null)
             {
                 var items = basket.BasketItems.ToList();
+                var product = await _productReadRepository.GetByIdAsync(basketItem.ProductId.ToString());
+
+                if (product is null) throw new UserFriendlyException("Ürün bulunamadı.");
 
                 var productIsInBasket = items.FirstOrDefault(d => d.ProductId == basketItem.ProductId);
-
                 if (productIsInBasket != null) productIsInBasket.Quantity++;
                 else
                 {
@@ -70,8 +89,8 @@ namespace ETicaret.Application.Abstractions.Services
                     {
                         BasketId = basket.Id,
                         ProductId = basketItem.ProductId,
-                        Quantity = basketItem.Quantity
-
+                        Quantity = basketItem.Quantity,
+                        Price = product.Price
                     });
                 }
 
@@ -106,11 +125,11 @@ namespace ETicaret.Application.Abstractions.Services
 
             if (!string.IsNullOrEmpty(userId))
             {
-                var userBasket = await _basketReadRepository.DbSet.Include(c=>c.BasketItems)
+                var userBasket = await _basketReadRepository.DbSet.Include(c => c.BasketItems)
                     .FirstOrDefaultAsync(c => c.UserId == userId && c.BasketStatus == Domain.Enums.Status.Active);
 
                 if (userBasket is not null) return userBasket;
-                
+
                 Basket targetBasket = new()
                 {
                     BasketStatus = Domain.Enums.Status.Active,
