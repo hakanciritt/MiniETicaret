@@ -13,6 +13,7 @@ namespace ETicaret.Persistence.Contexts
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<File> Files { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }

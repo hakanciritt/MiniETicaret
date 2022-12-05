@@ -42,10 +42,12 @@ namespace ETicaret.Application.Abstractions.Services
         }
         public async Task<List<BasketItem>> GetAllBasketItemAsync()
         {
+            var contextUser = await GetBasketForUser();
+            
             var userBasket = await _basketReadRepository.DbSet.
                 Include(d => d.BasketItems)
                     .ThenInclude(d => d.Product)
-                .FirstOrDefaultAsync(d => d.UserId == _userSession.GetUserId && d.BasketStatus == Domain.Enums.Status.Active);
+                .FirstOrDefaultAsync(d => d.UserId == _userSession.GetUserId && d.BasketStatus == Domain.Enums.Status.Active && d.Id == contextUser.Id);
 
             return userBasket.BasketItems.ToList();
 
@@ -59,15 +61,9 @@ namespace ETicaret.Application.Abstractions.Services
             {
                 var items = basket.BasketItems.ToList();
 
-                BasketItem? checkProduct = await _basketItemReadRepository.GetSingleAsync(d =>
-                    d.BasketId == basket.Id && d.ProductId == basketItem.ProductId);
-
                 var productIsInBasket = items.FirstOrDefault(d => d.ProductId == basketItem.ProductId);
 
-                if (productIsInBasket != null)
-                {
-                    productIsInBasket.Quantity++;
-                }
+                if (productIsInBasket != null) productIsInBasket.Quantity++;
                 else
                 {
                     basket.BasketItems.Add(new()

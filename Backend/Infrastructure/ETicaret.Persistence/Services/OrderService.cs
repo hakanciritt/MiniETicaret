@@ -4,6 +4,7 @@ using ETicaret.Application.Repositories.Basket;
 using ETicaret.Application.Repositories.OrderRepository;
 using ETicaret.Application.UserSession;
 using ETicaret.Application.ViewModels.Orders;
+using ETicaret.Domain.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace ETicaret.Persistence.Services
@@ -29,13 +30,31 @@ namespace ETicaret.Persistence.Services
                         d.BasketStatus == Domain.Enums.Status.Active && d.UserId == _userSession.UserId);
 
             if (userBasket == null) throw new UserFriendlyException("Kullanıcı sepeti bulunamadı.");
+            
+            if (_userSession.GetUserId != userBasket.UserId) throw new UserFriendlyException("Bu sepet üzerinde işlem yapamazsınız");
 
-            await _orderWriteRepository.AddAsync(new Domain.Entities.Order()
+            var order = new Domain.Entities.Order()
             {
                 Address = createOrder.Address,
                 Description = createOrder.Description,
-                BasketId = userBasket.Id
-            });
+                BasketId = userBasket.Id,
+                UserId = _userSession.GetUserId,
+                OrderNo = new Random().Next(100000, 999999).ToString(),
+                TotalPrice = userBasket.BasketItems.Sum(c => c.Quantity * c.Price),
+                OrderItems = new List<OrderItem>()
+            };
+
+            foreach (var item in userBasket.BasketItems.ToList())
+            {
+                order.OrderItems.Add(new OrderItem()
+                {
+                    Price = item.Price,
+                    Quantity = item.Quantity,
+                    ProductId = item.ProductId,
+                });
+            }
+
+            await _orderWriteRepository.AddAsync(order);
 
             userBasket.BasketStatus = Domain.Enums.Status.Passive;
             await _orderWriteRepository.SaveAsync();
