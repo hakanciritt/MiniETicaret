@@ -4,6 +4,7 @@ import { ProductsModule } from './products/products.module';
 import { OrderModule } from './order/order.module';
 import { CustomerModule } from './customer/customer.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { DeleteModule } from 'src/app/directives/admin/delete/delete.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     ProductsModule,
     OrderModule,
     CustomerModule,
-    DashboardModule
+    DashboardModule,
+    DeleteModule
   ]
 })
 export class ComponentsModule { }

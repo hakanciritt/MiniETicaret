@@ -11,6 +11,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FileUploadModule } from 'src/app/services/common/file-upload/file-upload.module';
 import { DialogModule } from 'src/app/dialogs/dialog.module';
+import { DeleteModule } from 'src/app/directives/admin/delete/delete.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DialogModule } from 'src/app/dialogs/dialog.module';
     ]),
     MatSidenavModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatTableModule, MatPaginatorModule,
     DialogModule,
-    FileUploadModule
+    FileUploadModule,
+    DeleteModule
   ]
 })
 export class OrderModule { }

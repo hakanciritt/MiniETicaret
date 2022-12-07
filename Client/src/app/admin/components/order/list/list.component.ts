@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource, _MatTableDataSource } from '@angular/material/table';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { List_Order } from 'src/app/contracts/order/list_order';
@@ -28,9 +28,12 @@ export class ListComponent extends BaseComponent implements OnInit {
   dataSource: MatTableDataSource<List_Order> = null;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  async ngOnInit() {
+    await this.getOrders();
+  }
+
   async getOrders() {
     this.showSpinner(SpinnerType.BallAtom);
-
     const allOrders: { totalOrderCount: number; orders: List_Order[] } = await this.orderService.getAllOrders(this.paginator
       ? this.paginator.pageIndex : 0, this.paginator ? this.paginator.pageSize : 5,
       () => this.hideSpinner(SpinnerType.BallAtom), errorMessage => this.alertifyService.message(errorMessage, {
@@ -56,9 +59,4 @@ export class ListComponent extends BaseComponent implements OnInit {
   async pageChanged() {
     await this.getOrders();
   }
-
-  async ngOnInit() {
-    await this.getOrders();
-  }
-
 }

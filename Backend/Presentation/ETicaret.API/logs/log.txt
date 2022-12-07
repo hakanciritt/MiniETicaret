@@ -17826,3 +17826,1081 @@ ORDER BY [t].[CreateData] DESC
 2022-12-07 00:02:05.058 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/orders-hub?id=mpPQpCFDLGql-wwML7O7DQ - -
 2022-12-07 00:02:05.060 +03:00 [INF] CORS policy execution successful.
 2022-12-07 00:02:05.062 +03:00 [INF] Executing endpoint '/orders-hub'
+2022-12-07 22:45:35.913 +03:00 [INF] User profile is available. Using 'C:\Users\hakan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-07 22:45:36.706 +03:00 [INF] Now listening on: https://localhost:7145
+2022-12-07 22:45:36.708 +03:00 [INF] Now listening on: http://localhost:5145
+2022-12-07 22:45:36.711 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-07 22:45:36.713 +03:00 [INF] Hosting environment: Development
+2022-12-07 22:45:36.714 +03:00 [INF] Content root path: C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\
+2022-12-07 22:45:40.110 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/index.html - -
+2022-12-07 22:45:40.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/index.html - - - 200 - text/html;charset=utf-8 575.6361ms
+2022-12-07 22:45:40.757 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - -
+2022-12-07 22:45:40.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 13.0004ms
+2022-12-07 22:45:41.565 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - -
+2022-12-07 22:45:41.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 153.9035ms
+2022-12-07 22:45:41.908 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - -
+2022-12-07 22:45:42.102 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 194.1747ms
+2022-12-07 22:45:47.976 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/auth/login - -
+2022-12-07 22:45:47.993 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:45:48.001 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/auth/login - - - 204 - - 24.8845ms
+2022-12-07 22:45:48.028 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/api/auth/login application/json 55
+2022-12-07 22:45:48.039 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:45:48.078 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.AuthController.Login (ETicaret.API)'
+2022-12-07 22:45:48.162 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ETicaret.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller ETicaret.API.Controllers.AuthController (ETicaret.API).
+2022-12-07 22:45:52.237 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'BasketItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-07 22:45:52.239 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-07 22:45:52.241 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-07 22:45:52.244 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-07 22:45:52.246 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-12-07 22:45:52.621 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:45:53.978 +03:00 [INF] Executed DbCommand (229ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NameSurname], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 22:45:54.598 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-12-07 22:45:55.525 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NameSurname], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 22:45:56.098 +03:00 [INF] Executed DbCommand (97ms) [Parameters=[@p17='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p18='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NameSurname] = @p6, [NormalizedEmail] = @p7, [NormalizedUserName] = @p8, [PasswordHash] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [RefreshToken] = @p12, [RefreshTokenEndDate] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+SELECT @@ROWCOUNT;
+2022-12-07 22:45:56.197 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2022-12-07 22:45:56.221 +03:00 [INF] Executed action ETicaret.API.Controllers.AuthController.Login (ETicaret.API) in 8022.5327ms
+2022-12-07 22:45:56.224 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.AuthController.Login (ETicaret.API)'
+2022-12-07 22:45:56.254 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/api/auth/login application/json 55 - 200 - application/json;+charset=utf-8 8225.6573ms
+2022-12-07 22:46:03.363 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 22:46:03.908 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:03.910 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - - - 204 - - 546.8417ms
+2022-12-07 22:46:04.486 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 22:46:04.492 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:04.493 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - - - 204 - - 7.6998ms
+2022-12-07 22:46:05.553 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 22:46:05.555 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:05.557 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2022-12-07 22:46:06.221 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 22:46:06.223 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:06.502 +03:00 [INF] Executing endpoint '/orders-hub/negotiate'
+2022-12-07 22:46:06.814 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2022-12-07 22:46:06.814 +03:00 [INF] Executed endpoint '/orders-hub/negotiate'
+2022-12-07 22:46:06.817 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 1263.2118ms
+2022-12-07 22:46:06.818 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 596.3916ms
+2022-12-07 22:46:06.972 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/products-hub?id=NQor3EyHyXEyOF3ryJXYtg - -
+2022-12-07 22:46:06.973 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:06.976 +03:00 [INF] Executing endpoint '/products-hub'
+2022-12-07 22:46:07.059 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/orders-hub?id=4K_DH6cLNmPTT9sBmV97Ng - -
+2022-12-07 22:46:07.084 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:07.086 +03:00 [INF] Executing endpoint '/orders-hub'
+2022-12-07 22:46:38.120 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 22:46:38.122 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:38.123 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 3.1282ms
+2022-12-07 22:46:38.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 22:46:38.131 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:38.304 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 22:46:38.314 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 22:46:38.378 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:46:38.437 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 22:46:38.451 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-12-07 22:46:38.453 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-12-07 22:46:38.473 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 22:46:38.483 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 22:46:38.508 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 191.5835ms
+2022-12-07 22:46:38.512 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 22:46:38.515 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 384.4381ms
+2022-12-07 22:46:39.463 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:46:39.465 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:39.466 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 3.1917ms
+2022-12-07 22:46:39.477 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:46:39.478 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:39.487 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:46:39.493 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:46:39.511 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:46:39.615 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:46:39.620 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:46:39.623 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 127.8063ms
+2022-12-07 22:46:39.626 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:46:39.629 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 152.0327ms
+2022-12-07 22:46:42.912 +03:00 [INF] Executed endpoint '/orders-hub'
+2022-12-07 22:46:42.912 +03:00 [INF] Executed endpoint '/products-hub'
+2022-12-07 22:46:42.915 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7145/orders-hub?id=4K_DH6cLNmPTT9sBmV97Ng - - - 101 - - 35855.8661ms
+2022-12-07 22:46:42.916 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7145/products-hub?id=NQor3EyHyXEyOF3ryJXYtg - - - 101 - - 35944.4104ms
+2022-12-07 22:46:43.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:46:43.380 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:46:43.383 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:46:43.384 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:46:43.388 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:46:43.400 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:46:43.403 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:46:43.406 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 19.8297ms
+2022-12-07 22:46:43.410 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:46:43.412 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 33.5647ms
+2022-12-07 22:49:30.118 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:49:30.119 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:49:30.124 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 6.2336ms
+2022-12-07 22:49:30.157 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:49:30.159 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:49:30.161 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:49:30.163 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:49:30.176 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:49:30.188 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:49:30.202 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:49:30.206 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 40.374ms
+2022-12-07 22:49:30.209 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:49:30.214 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 56.1687ms
+2022-12-07 22:49:34.313 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:49:34.314 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:49:34.316 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:49:34.317 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:49:34.321 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:49:34.329 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:49:34.333 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:49:34.334 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 14.5185ms
+2022-12-07 22:49:34.336 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:49:34.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 24.7968ms
+2022-12-07 22:49:36.389 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 22:49:36.391 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:49:36.392 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 2.7893ms
+2022-12-07 22:49:36.397 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 22:49:36.398 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:49:36.399 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 22:49:36.400 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 22:49:36.404 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:49:36.408 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 22:49:36.412 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 22:49:36.415 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 22:49:36.417 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 15.1408ms
+2022-12-07 22:49:36.420 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 22:49:36.421 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 24.6127ms
+2022-12-07 22:49:37.063 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:49:37.065 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:49:37.066 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 3.2802ms
+2022-12-07 22:49:37.076 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:49:37.078 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:49:37.080 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:49:37.083 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:49:37.088 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:49:37.096 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:49:37.100 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:49:37.103 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 16.6351ms
+2022-12-07 22:49:37.106 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:49:37.108 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 32.2341ms
+2022-12-07 22:54:07.332 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:54:07.336 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.339 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 13.1373ms
+2022-12-07 22:54:07.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:54:07.355 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.358 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:54:07.361 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:54:07.372 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:54:07.383 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:54:07.391 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:54:07.394 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 29.5789ms
+2022-12-07 22:54:07.396 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:54:07.398 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 47.3501ms
+2022-12-07 22:54:07.673 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 22:54:07.673 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 22:54:07.677 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.678 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.679 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - - - 204 - - 7.1955ms
+2022-12-07 22:54:07.681 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - - - 204 - - 7.7929ms
+2022-12-07 22:54:07.730 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 22:54:07.752 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 22:54:07.752 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.765 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.767 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2022-12-07 22:54:07.769 +03:00 [INF] Executing endpoint '/orders-hub/negotiate'
+2022-12-07 22:54:07.787 +03:00 [INF] Executed endpoint '/orders-hub/negotiate'
+2022-12-07 22:54:07.791 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2022-12-07 22:54:07.791 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 42.8489ms
+2022-12-07 22:54:07.800 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 70.9753ms
+2022-12-07 22:54:07.893 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/orders-hub?id=oL4F-B1jQ3kz1umjmEjCwQ - -
+2022-12-07 22:54:07.895 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.897 +03:00 [INF] Executing endpoint '/orders-hub'
+2022-12-07 22:54:07.945 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/products-hub?id=RH8Uxq8SBhJ-M-b5skRRDw - -
+2022-12-07 22:54:07.947 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:07.948 +03:00 [INF] Executing endpoint '/products-hub'
+2022-12-07 22:54:08.990 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:54:08.992 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:54:08.993 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:54:08.994 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:54:08.998 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:54:09.006 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:54:09.009 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:54:09.011 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 14.3481ms
+2022-12-07 22:54:09.013 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:54:09.015 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 24.5338ms
+2022-12-07 22:56:37.516 +03:00 [INF] Executed endpoint '/products-hub'
+2022-12-07 22:56:37.521 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7145/products-hub?id=RH8Uxq8SBhJ-M-b5skRRDw - - - 101 - - 149576.4731ms
+2022-12-07 22:56:37.522 +03:00 [INF] Executed endpoint '/orders-hub'
+2022-12-07 22:56:37.527 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7145/orders-hub?id=oL4F-B1jQ3kz1umjmEjCwQ - - - 101 - - 149633.6029ms
+2022-12-07 22:56:38.757 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:56:38.758 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:56:38.760 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:56:38.762 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:56:38.763 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 5.8695ms
+2022-12-07 22:56:38.765 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 6.2533ms
+2022-12-07 22:56:38.794 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:56:38.795 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:56:38.797 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:56:38.812 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:56:38.826 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:56:38.844 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:56:38.856 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:56:38.861 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 38.207ms
+2022-12-07 22:56:38.865 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:56:38.869 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 74.2816ms
+2022-12-07 22:56:38.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:56:38.879 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:56:38.881 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:56:38.883 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:56:38.893 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:56:38.903 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:56:38.908 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:56:38.912 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 22.7101ms
+2022-12-07 22:56:38.915 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:56:38.918 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 42.0565ms
+2022-12-07 22:57:05.074 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:57:05.075 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:57:05.077 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 2.7101ms
+2022-12-07 22:57:05.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:57:05.086 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:57:05.096 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:05.098 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:57:05.106 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:57:05.144 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:57:05.160 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:57:05.163 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 58.444ms
+2022-12-07 22:57:05.200 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:05.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 118.6891ms
+2022-12-07 22:57:05.370 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:57:05.372 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:57:05.374 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:05.376 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:57:05.381 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:57:05.393 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:57:05.397 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:57:05.400 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 21.0264ms
+2022-12-07 22:57:05.404 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:05.414 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 43.9535ms
+2022-12-07 22:57:07.711 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:57:07.712 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:57:07.715 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:07.716 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:57:07.719 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:57:07.726 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:57:07.730 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:57:07.732 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 13.6829ms
+2022-12-07 22:57:07.734 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:07.736 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 25.5695ms
+2022-12-07 22:57:08.425 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 22:57:08.426 +03:00 [INF] CORS policy execution successful.
+2022-12-07 22:57:08.427 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:08.428 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 22:57:08.433 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 22:57:08.437 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 22:57:08.441 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 22:57:08.443 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 12.1444ms
+2022-12-07 22:57:08.445 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 22:57:08.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 22.3610ms
+2022-12-07 23:01:24.025 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/auth/login - -
+2022-12-07 23:01:24.027 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:24.028 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/auth/login - - - 204 - - 2.7966ms
+2022-12-07 23:01:24.040 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/api/auth/login application/json 55
+2022-12-07 23:01:24.041 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:24.042 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.AuthController.Login (ETicaret.API)'
+2022-12-07 23:01:24.044 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ETicaret.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller ETicaret.API.Controllers.AuthController (ETicaret.API).
+2022-12-07 23:01:24.100 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:01:24.132 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NameSurname], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 23:01:24.193 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-12-07 23:01:24.206 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NameSurname], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 23:01:24.267 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[@p17='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p18='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NameSurname] = @p6, [NormalizedEmail] = @p7, [NormalizedUserName] = @p8, [PasswordHash] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [RefreshToken] = @p12, [RefreshTokenEndDate] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+SELECT @@ROWCOUNT;
+2022-12-07 23:01:24.275 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2022-12-07 23:01:24.277 +03:00 [INF] Executed action ETicaret.API.Controllers.AuthController.Login (ETicaret.API) in 223.8572ms
+2022-12-07 23:01:24.279 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.AuthController.Login (ETicaret.API)'
+2022-12-07 23:01:24.280 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/api/auth/login application/json 55 - 200 - application/json;+charset=utf-8 240.0746ms
+2022-12-07 23:01:24.340 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:01:24.341 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:24.342 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 2.1507ms
+2022-12-07 23:01:24.347 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:01:24.349 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:24.351 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:01:24.353 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:01:24.356 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:01:24.362 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:01:24.365 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:01:24.367 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 12.6133ms
+2022-12-07 23:01:24.372 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:01:24.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 25.9394ms
+2022-12-07 23:01:25.269 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 23:01:25.271 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:25.271 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 23:01:25.272 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - - - 204 - - 3.5523ms
+2022-12-07 23:01:25.274 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:25.276 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - - - 204 - - 5.5726ms
+2022-12-07 23:01:25.303 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 23:01:25.305 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:25.305 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 23:01:25.307 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2022-12-07 23:01:25.308 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:25.309 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2022-12-07 23:01:25.311 +03:00 [INF] Executing endpoint '/orders-hub/negotiate'
+2022-12-07 23:01:25.312 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 9.5433ms
+2022-12-07 23:01:25.314 +03:00 [INF] Executed endpoint '/orders-hub/negotiate'
+2022-12-07 23:01:25.317 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 11.4352ms
+2022-12-07 23:01:25.341 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/products-hub?id=fAjCPbS88pjdj3-SOvQ8Fw - -
+2022-12-07 23:01:25.342 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:25.342 +03:00 [INF] Executing endpoint '/products-hub'
+2022-12-07 23:01:25.372 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/orders-hub?id=GdRQSBURM1X-WeC2D4RMQg - -
+2022-12-07 23:01:25.373 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:25.374 +03:00 [INF] Executing endpoint '/orders-hub'
+2022-12-07 23:01:26.631 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:01:26.633 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:26.635 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:01:26.636 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:01:26.640 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:01:26.651 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:01:26.656 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:01:26.660 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 21.2171ms
+2022-12-07 23:01:26.663 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:01:26.665 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 34.8502ms
+2022-12-07 23:01:27.472 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:01:27.474 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:27.475 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 2.5889ms
+2022-12-07 23:01:27.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:01:27.481 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:27.483 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:01:27.484 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:01:27.492 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:01:27.499 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:01:27.507 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:01:27.513 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:01:27.517 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 31.367ms
+2022-12-07 23:01:27.520 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:01:27.522 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 42.3641ms
+2022-12-07 23:01:30.243 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:01:30.245 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:30.246 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 3.4640ms
+2022-12-07 23:01:30.253 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:01:30.255 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:30.256 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:01:30.258 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:01:30.262 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:01:30.268 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:01:30.271 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:01:30.273 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 11.995ms
+2022-12-07 23:01:30.274 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:01:30.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 21.8653ms
+2022-12-07 23:01:31.729 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:01:31.731 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:01:31.732 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:01:31.734 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:01:31.737 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:01:31.740 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:01:31.745 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:01:31.749 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:01:31.751 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 15.023ms
+2022-12-07 23:01:31.752 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:01:31.753 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 24.8379ms
+2022-12-07 23:02:23.323 +03:00 [INF] Executed endpoint '/products-hub'
+2022-12-07 23:02:23.340 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7145/products-hub?id=fAjCPbS88pjdj3-SOvQ8Fw - - - 101 - - 57999.5162ms
+2022-12-07 23:02:23.389 +03:00 [INF] Executed endpoint '/orders-hub'
+2022-12-07 23:02:23.390 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7145/orders-hub?id=GdRQSBURM1X-WeC2D4RMQg - - - 101 - - 58017.7730ms
+2022-12-07 23:02:24.380 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:02:24.381 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:02:24.382 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 2.1008ms
+2022-12-07 23:02:24.387 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:02:24.388 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:02:24.390 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:02:24.391 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:02:24.396 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:02:24.399 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:02:24.404 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:02:24.407 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:02:24.409 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 15.2842ms
+2022-12-07 23:02:24.412 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:02:24.415 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 28.0065ms
+2022-12-07 23:02:40.628 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:02:40.629 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:02:40.630 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 2.1011ms
+2022-12-07 23:02:40.635 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:02:40.636 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:02:40.637 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:02:40.638 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:02:40.641 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:02:40.645 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:02:40.650 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:02:40.653 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:02:40.655 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 14.5155ms
+2022-12-07 23:02:40.656 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:02:40.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 22.6241ms
+2022-12-07 23:02:42.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:02:42.953 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:02:42.955 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:02:42.956 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:02:42.960 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:02:42.963 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:02:42.968 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:02:42.971 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:02:42.973 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 14.679ms
+2022-12-07 23:02:42.976 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:02:42.982 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 31.4794ms
+2022-12-07 23:03:36.753 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:03:36.756 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:03:36.764 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 11.0234ms
+2022-12-07 23:03:36.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:03:36.788 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:03:36.790 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:03:36.793 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:03:36.800 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:03:36.836 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:03:36.845 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:03:36.851 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:03:36.856 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 59ms
+2022-12-07 23:03:36.865 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:03:36.867 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 80.2633ms
+2022-12-07 23:03:44.846 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:03:44.849 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:03:44.851 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 5.2147ms
+2022-12-07 23:03:44.866 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:03:44.868 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:03:44.870 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:03:44.872 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:03:44.876 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:03:44.884 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:03:44.897 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:03:44.902 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:03:44.904 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 29.6779ms
+2022-12-07 23:03:44.907 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:03:44.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 46.6907ms
+2022-12-07 23:03:50.009 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:03:50.011 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:03:50.012 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 3.5408ms
+2022-12-07 23:03:50.020 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:03:50.022 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:03:50.023 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:03:50.025 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:03:50.030 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:03:50.041 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:03:50.044 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:03:50.046 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 16.6635ms
+2022-12-07 23:03:50.048 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:03:50.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 29.4071ms
+2022-12-07 23:04:46.283 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:04:46.287 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:04:46.288 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 4.4756ms
+2022-12-07 23:04:46.299 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:04:46.300 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:04:46.302 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:04:46.303 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:04:46.306 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:04:46.315 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:04:46.320 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:04:46.322 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 16.7048ms
+2022-12-07 23:04:46.324 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:04:46.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 27.6520ms
+2022-12-07 23:05:17.630 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:05:17.631 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:05:17.633 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 3.1418ms
+2022-12-07 23:05:17.657 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:05:17.659 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:05:17.661 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:05:17.662 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:05:17.666 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:05:17.676 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:05:17.680 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:05:17.682 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 17.247ms
+2022-12-07 23:05:17.684 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:05:17.685 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 28.1730ms
+2022-12-07 23:09:16.002 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:09:16.024 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:09:16.026 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 25.3114ms
+2022-12-07 23:09:16.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:09:16.055 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:09:16.057 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:09:16.059 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:09:16.068 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:09:16.086 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:09:16.096 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:09:16.100 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 33.884ms
+2022-12-07 23:09:16.116 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:09:16.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 78.8018ms
+2022-12-07 23:09:19.679 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:09:19.680 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:09:19.682 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 3.2106ms
+2022-12-07 23:09:19.689 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:09:19.691 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:09:19.693 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:09:19.695 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:09:19.699 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:09:19.705 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:09:19.711 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:09:19.716 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:09:19.718 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 20.5949ms
+2022-12-07 23:09:19.721 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:09:19.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 35.2301ms
+2022-12-07 23:09:20.151 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:09:20.153 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:09:20.155 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:09:20.158 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:09:20.163 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:09:20.172 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:09:20.177 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:09:20.181 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 18.9081ms
+2022-12-07 23:09:20.183 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:09:20.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 34.3850ms
+2022-12-07 23:09:24.667 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders/undefined - -
+2022-12-07 23:09:24.677 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:09:24.679 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders/undefined - - - 204 - - 11.7218ms
+2022-12-07 23:09:24.685 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7145/api/orders/undefined - -
+2022-12-07 23:09:24.686 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:09:24.695 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7145/api/orders/undefined - - - 404 0 - 9.5591ms
+2022-12-07 23:11:53.435 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:11:53.437 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:11:53.439 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/products?page=0&size=5 - - - 204 - - 7.3965ms
+2022-12-07 23:11:53.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - -
+2022-12-07 23:11:53.452 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:11:53.455 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:11:53.458 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2022-12-07 23:11:53.468 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:11:53.479 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2022-12-07 23:11:53.486 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-12-07 23:11:53.492 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-12-07 23:11:53.494 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 31.3834ms
+2022-12-07 23:11:53.497 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2022-12-07 23:11:53.499 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/products?page=0&size=5 - - - 200 - application/json;+charset=utf-8 48.4546ms
+2022-12-07 23:11:55.851 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:11:55.853 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:11:55.855 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 3.7458ms
+2022-12-07 23:11:55.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:11:55.863 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:11:55.865 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:11:55.868 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:11:55.874 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:11:55.881 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:11:55.884 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:11:55.886 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 15.8753ms
+2022-12-07 23:11:55.889 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:11:55.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 28.5953ms
+2022-12-07 23:27:39.585 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/baskets - -
+2022-12-07 23:27:39.646 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:39.649 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/baskets - - - 204 - - 65.4652ms
+2022-12-07 23:27:39.668 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/baskets - -
+2022-12-07 23:27:39.671 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:39.760 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-12-07 23:27:39.883 +03:00 [INF] AdminScheme was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2022-12-07 23:27:39.913 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-12-07 23:27:40.001 +03:00 [INF] AuthenticationScheme: AdminScheme was challenged.
+2022-12-07 23:27:40.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/baskets - - - 401 0 - 345.0124ms
+2022-12-07 23:27:40.027 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/auth/refreshTokenLogin - -
+2022-12-07 23:27:40.028 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:40.029 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/auth/refreshTokenLogin - - - 204 - - 2.2532ms
+2022-12-07 23:27:40.043 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/api/auth/refreshTokenLogin application/json 63
+2022-12-07 23:27:40.048 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:40.051 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.AuthController.RefreshTokenLogin (ETicaret.API)'
+2022-12-07 23:27:40.096 +03:00 [INF] Route matched with {action = "RefreshTokenLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshTokenLogin(ETicaret.Application.Features.Commands.AppUser.RefreshTokenLogin.RefreshTokenLoginCommandRequest) on controller ETicaret.API.Controllers.AuthController (ETicaret.API).
+2022-12-07 23:27:40.209 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:27:40.461 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NameSurname], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[RefreshToken] = @__refreshToken_0
+2022-12-07 23:27:41.248 +03:00 [INF] Executed action ETicaret.API.Controllers.AuthController.RefreshTokenLogin (ETicaret.API) in 1149.2664ms
+2022-12-07 23:27:41.254 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.AuthController.RefreshTokenLogin (ETicaret.API)'
+2022-12-07 23:27:41.431 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+ETicaret.Application.Exceptions.NotFoundUserException: Exception of type 'ETicaret.Application.Exceptions.NotFoundUserException' was thrown.
+   at ETicaret.Persistence.Services.AuthService.RefreshTokenLoginAsync(String refreshToken) in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\Services\AuthService.cs:line 91
+   at ETicaret.Application.Features.Commands.AppUser.RefreshTokenLogin.RefreshTokenLoginCommandHandler.Handle(RefreshTokenLoginCommandRequest request, CancellationToken cancellationToken) in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Core\ETicaret.Application\Features\Commands\AppUser\RefreshTokenLogin\RefreshTokenLoginCommandHandler.cs:line 16
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ETicaret.API.Controllers.AuthController.RefreshTokenLogin(RefreshTokenLoginCommandRequest request) in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\Controllers\AuthController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\Program.cs:line 134
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-12-07 23:27:41.544 +03:00 [ERR] Exception of type 'ETicaret.Application.Exceptions.NotFoundUserException' was thrown.
+2022-12-07 23:27:41.563 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/api/auth/refreshTokenLogin application/json 63 - 500 - application/json;+charset=utf-8 1520.7763ms
+2022-12-07 23:27:44.067 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/auth/login - -
+2022-12-07 23:27:44.069 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:44.070 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/auth/login - - - 204 - - 2.2549ms
+2022-12-07 23:27:44.084 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/api/auth/login application/json 55
+2022-12-07 23:27:44.085 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:44.086 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.AuthController.Login (ETicaret.API)'
+2022-12-07 23:27:44.087 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ETicaret.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller ETicaret.API.Controllers.AuthController (ETicaret.API).
+2022-12-07 23:27:44.115 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:27:44.123 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NameSurname], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 23:27:44.144 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-12-07 23:27:44.152 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NameSurname], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 23:27:44.174 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p17='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p18='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NameSurname] = @p6, [NormalizedEmail] = @p7, [NormalizedUserName] = @p8, [PasswordHash] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [RefreshToken] = @p12, [RefreshTokenEndDate] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+SELECT @@ROWCOUNT;
+2022-12-07 23:27:44.180 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2022-12-07 23:27:44.182 +03:00 [INF] Executed action ETicaret.API.Controllers.AuthController.Login (ETicaret.API) in 89.6533ms
+2022-12-07 23:27:44.183 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.AuthController.Login (ETicaret.API)'
+2022-12-07 23:27:44.185 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/api/auth/login application/json 55 - 200 - application/json;+charset=utf-8 100.6995ms
+2022-12-07 23:27:46.139 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 23:27:46.144 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:46.149 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - -
+2022-12-07 23:27:46.149 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/products-hub/negotiate?negotiateVersion=1 - - - 204 - - 10.1459ms
+2022-12-07 23:27:46.150 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:46.155 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 - - - 204 - - 6.2564ms
+2022-12-07 23:27:46.176 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 23:27:46.177 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:46.178 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2022-12-07 23:27:46.179 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2022-12-07 23:27:46.181 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:46.181 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2022-12-07 23:27:46.182 +03:00 [INF] Executing endpoint '/orders-hub/negotiate'
+2022-12-07 23:27:46.183 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/products-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 7.5093ms
+2022-12-07 23:27:46.185 +03:00 [INF] Executed endpoint '/orders-hub/negotiate'
+2022-12-07 23:27:46.187 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7145/orders-hub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 - 200 316 application/json 7.4608ms
+2022-12-07 23:27:46.222 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/products-hub?id=4Nxou6EyJyqQoYCSl3itNA - -
+2022-12-07 23:27:46.225 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:46.226 +03:00 [INF] Executing endpoint '/products-hub'
+2022-12-07 23:27:46.257 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7145/orders-hub?id=UphkLx5j3Lv3jmNebP6PRw - -
+2022-12-07 23:27:46.259 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:46.260 +03:00 [INF] Executing endpoint '/orders-hub'
+2022-12-07 23:27:47.236 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:27:47.239 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:47.240 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 3.9267ms
+2022-12-07 23:27:47.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:27:47.249 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:47.251 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:47.252 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:27:47.256 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:27:47.266 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:27:47.270 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:27:47.271 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 16.8831ms
+2022-12-07 23:27:47.274 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:47.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 28.4800ms
+2022-12-07 23:27:50.630 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=10 - -
+2022-12-07 23:27:50.632 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:50.633 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=10 - - - 204 - - 2.1926ms
+2022-12-07 23:27:50.640 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=10 - -
+2022-12-07 23:27:50.642 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:50.644 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:50.646 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:27:50.649 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:27:50.655 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:27:50.660 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:27:50.662 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 14.1407ms
+2022-12-07 23:27:50.664 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:50.665 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=10 - - - 200 - application/json;+charset=utf-8 25.3793ms
+2022-12-07 23:27:52.686 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=20 - -
+2022-12-07 23:27:52.689 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:52.691 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=20 - - - 204 - - 4.1764ms
+2022-12-07 23:27:52.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=20 - -
+2022-12-07 23:27:52.704 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:52.706 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:52.707 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:27:52.712 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:27:52.722 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:27:52.727 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:27:52.729 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 18.7244ms
+2022-12-07 23:27:52.731 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:52.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=20 - - - 200 - application/json;+charset=utf-8 30.5243ms
+2022-12-07 23:27:54.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=10 - -
+2022-12-07 23:27:54.273 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:27:54.275 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:54.277 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:27:54.282 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:27:54.289 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:27:54.293 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:27:54.295 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 14.8788ms
+2022-12-07 23:27:54.297 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:27:54.300 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=10 - - - 200 - application/json;+charset=utf-8 28.4415ms
+2022-12-07 23:28:06.827 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=20 - -
+2022-12-07 23:28:06.829 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:28:06.830 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=20 - - - 204 - - 2.8605ms
+2022-12-07 23:28:06.838 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=20 - -
+2022-12-07 23:28:06.839 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:28:06.842 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:28:06.846 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:28:06.850 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:28:06.863 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:28:06.867 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:28:06.869 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 20.0661ms
+2022-12-07 23:28:06.873 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:28:06.876 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=20 - - - 200 - application/json;+charset=utf-8 38.0590ms
+2022-12-07 23:28:08.652 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:28:08.654 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:28:08.656 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7145/api/orders?page=0&size=5 - - - 204 - - 4.5273ms
+2022-12-07 23:28:08.662 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - -
+2022-12-07 23:28:08.665 +03:00 [INF] CORS policy execution successful.
+2022-12-07 23:28:08.666 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:28:08.667 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryRequest) on controller ETicaret.API.Controllers.OrdersController (ETicaret.API).
+2022-12-07 23:28:08.674 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2022-12-07 23:28:08.681 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreateData], [t].[OrderNo], [t].[TotalPrice], [t].[Description], [a].[PhoneNumber], [a].[UserName]
+FROM (
+    SELECT [o].[CreateData], [o].[Description], [o].[OrderNo], [o].[TotalPrice], [o].[UserId]
+    FROM [Orders] AS [o]
+    ORDER BY [o].[CreateData] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+ORDER BY [t].[CreateData] DESC
+2022-12-07 23:28:08.684 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaret.Application.Features.Queries.Order.GetAllOrder.GetAllOrderQueryResponse'.
+2022-12-07 23:28:08.687 +03:00 [INF] Executed action ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API) in 14.6879ms
+2022-12-07 23:28:08.689 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.OrdersController.GetAllOrders (ETicaret.API)'
+2022-12-07 23:28:08.690 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/orders?page=0&size=5 - - - 200 - application/json;+charset=utf-8 28.1500ms

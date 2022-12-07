@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutModule } from './layout/layout.module';
 import { ComponentsModule } from './components/components.module';
+import { DeleteModule } from '../directives/admin/delete/delete.module';
 
 
 
@@ -13,7 +14,8 @@ import { ComponentsModule } from './components/components.module';
     ComponentsModule
   ],
   exports: [
-    LayoutModule
+    LayoutModule,
+    DeleteModule
   ]
 })
 export class AdminModule { }

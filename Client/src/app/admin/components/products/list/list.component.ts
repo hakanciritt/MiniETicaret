@@ -38,7 +38,8 @@ export class ListComponent extends BaseComponent implements OnInit {
       dismissOthers: true,
       messageType: MessageType.Error,
       position: Position.TopRight
-    }))
+    }));
+
     this.dataSource = new MatTableDataSource<List_Product>(allProducts.products);
     this.paginator.length = allProducts.totalProductCount;
   }
