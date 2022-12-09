@@ -1,4 +1,5 @@
 ﻿using ETicaret.Domain.Entities.Common;
+using ETicaret.Domain.Enums;
 
 namespace ETicaret.Domain.Entities
 {
@@ -11,6 +12,8 @@ namespace ETicaret.Domain.Entities
         public string? UserId { get; set; }
         public decimal TotalPrice { get; set; }
         public AppUser User { get; set; }
+        public OrderStatus OrderStatus { get; set; }
+        public decimal? Discount { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }
     }
 }
