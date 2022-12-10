@@ -1,8 +1,10 @@
 ﻿using ETicaret.Application.Abstractions.Services;
 using ETicaret.Application.DTOs.User;
 using ETicaret.Application.Exceptions;
+using ETicaret.Application.ViewModels;
 using ETicaret.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ETicaret.Persistence.Services
 {
@@ -34,6 +36,12 @@ namespace ETicaret.Persistence.Services
 
             return response;
         }
+
+        public async Task<List<AppUser>> GetAllUsers(PagedRequest pagination)
+        {
+            return await _userManager.Users.Skip(pagination.Page * pagination.Size).Take(pagination.Size).ToListAsync();
+        }
+
         public async Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
         {
             if (user != null)
@@ -45,7 +53,6 @@ namespace ETicaret.Persistence.Services
             else
             {
                 throw new NotFoundUserException($"{user?.UserName} adlı kullanıcı bulunamadı");
-
             }
         }
     }

@@ -7,7 +7,6 @@ using ETicaret.Application.Features.Commands.ProductImageFile.ChangeShowcaseImag
 using ETicaret.Application.Features.Queries.Product.GetAllProduct;
 using ETicaret.Application.Features.Queries.Product.GetByIdProduct;
 using ETicaret.Application.Features.Queries.ProductImageFile.GetProductImages;
-using ETicaret.Application.Filters;
 using ETicaret.Application.Repositories;
 using ETicaret.Domain.Entities;
 using MediatR;
@@ -22,18 +21,15 @@ namespace ETicaret.API.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductImageFileWriteRepository _productImageWriteRepository;
-        private readonly IProductImageFileReadRepository _productImageReadRepository;
         private readonly IStorageService _storageService;
         private readonly IMediator _mediator;
 
         public ProductsController(
             IProductImageFileWriteRepository productImageWriteRepository,
-            IProductImageFileReadRepository productImageReadRepository,
             IStorageService storageService,
             IMediator mediator)
         {
             _productImageWriteRepository = productImageWriteRepository;
-            _productImageReadRepository = productImageReadRepository;
             _storageService = storageService;
             _mediator = mediator;
         }
