@@ -6,6 +6,7 @@ using ETicaret.Application.Repositories.OrderRepository;
 using ETicaret.Application.UserSession;
 using ETicaret.Application.ViewModels;
 using ETicaret.Application.ViewModels.Orders;
+using ETicaret.Domain.Entities;
 using ETicaret.Domain.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -46,6 +47,7 @@ namespace ETicaret.Persistence.Services
                 UserId = _userSession.GetUserId,
                 OrderNo = new Random().Next(100000, 999999).ToString(),
                 TotalPrice = userBasket.BasketItems.Sum(c => c.Quantity * c.Price),
+                OrderStatus = Domain.Enums.OrderStatus.Created,
                 OrderItems = new List<OrderItem>()
             };
 
@@ -74,8 +76,10 @@ namespace ETicaret.Persistence.Services
                  .Skip(request.Page * request.Size).Take(request.Size)
                  .Select(d => new OrderDto()
                  {
+                     Id = d.Id,
                      CreateData = d.CreateData,
                      OrderNo = d.OrderNo,
+                     OrderStatus = d.OrderStatus,
                      TotalPrice = d.TotalPrice,
                      Description = d.Description,
                      User = new Application.DTOs.User.AppUserDto()
@@ -84,6 +88,16 @@ namespace ETicaret.Persistence.Services
                          UserName = d.User.UserName
                      }
                  }).ToListAsync();
+        }
+
+        public async Task<Order> GetOrderById(string orderId)
+        {
+            var order = await _orderReadRepository.DbSet
+                .Include(c => c.OrderItems).ThenInclude(c => c.Product)
+                .Include(d => d.User)
+                .FirstOrDefaultAsync(c => c.Id == Guid.Parse(orderId));
+            if (order is null) throw new UserFriendlyException("Sipariş bulunamadı.");
+            return order;
         }
     }
 }

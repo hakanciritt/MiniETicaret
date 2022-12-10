@@ -16,6 +16,7 @@ namespace ETicaret.Application.Features.Queries.Order.GetAllOrder
 
             var response = orders.Select(c => new OrderResponseModel()
             {
+                Id = c.Id,
                 CreatedDate = c.CreateData,
                 OrderNo = c.OrderNo,
                 TotalPrice = c.TotalPrice,

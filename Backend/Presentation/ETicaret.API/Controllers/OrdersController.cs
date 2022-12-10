@@ -1,6 +1,7 @@
 ﻿using ETicaret.Application.Constants;
 using ETicaret.Application.Features.Commands.Order.CreateOrder;
 using ETicaret.Application.Features.Queries.Order.GetAllOrder;
+using ETicaret.Application.Features.Queries.Order.GetOrderById;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +33,11 @@ namespace ETicaret.API.Controllers
             return Ok(result);
         }
 
-
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetOrderById([FromRoute] GetOrderByIdQueryRequest request)
+        {
+            var result = await _mediator.Send(request);
+            return Ok(result);
+        }
     }
 }

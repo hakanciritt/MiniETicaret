@@ -1,6 +1,7 @@
-export class List_Order{
-  orderNo:string;
-  userName :string;
-  totalPrice : string;
-  createdDate:Date;
+export class List_Order {
+  id: string;
+  orderNo: string;
+  userName: string;
+  totalPrice: string;
+  createdDate: Date;
 }

@@ -9,6 +9,7 @@
     }
     public class OrderResponseModel
     {
+        public Guid Id { get; set; }
         public string OrderNo { get; set; }
         public string UserName { get; set; }
         public decimal TotalPrice { get; set; }

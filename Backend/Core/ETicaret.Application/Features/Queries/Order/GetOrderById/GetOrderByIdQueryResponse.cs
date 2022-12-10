@@ -1,10 +1,13 @@
-﻿using ETicaret.Application.DTOs.User;
+﻿using ETicaret.Application.DTOs.Order;
+using ETicaret.Application.DTOs.User;
 using ETicaret.Domain.Enums;
 
-namespace ETicaret.Application.DTOs.Order
+namespace ETicaret.Application.Features.Queries.Order.GetOrderById
 {
-    public class OrderDto : BaseEntityDto
+    public class GetOrderByIdQueryResponse
     {
+        public Guid Id { get; set; }
+        public DateTime CreatedDate { get; set; }
         public Guid? BasketId { get; set; }
         public string? Description { get; set; }
         public string? Address { get; set; }
