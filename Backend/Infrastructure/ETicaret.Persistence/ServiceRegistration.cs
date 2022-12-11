@@ -7,6 +7,7 @@ using ETicaret.Application.Repositories.CustomerRepository;
 using ETicaret.Application.Repositories.OrderRepository;
 using ETicaret.Application.Repositories.ProductRepository;
 using ETicaret.Domain.Entities;
+using ETicaret.Infrastructure.Repositories;
 using ETicaret.Persistence.Contexts;
 using ETicaret.Persistence.Repositories;
 using ETicaret.Persistence.Repositories.BasketItemRepository;
@@ -59,6 +60,9 @@ namespace ETicaret.Persistence
 
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IOrderService, OrderService>();
+
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+            services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 
             services.AddIdentity<AppUser, AppRole>(options =>
                 {

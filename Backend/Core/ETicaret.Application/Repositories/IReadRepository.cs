@@ -9,5 +9,6 @@ namespace ETicaret.Application.Repositories
         IQueryable<TEntity> GetWhere(Expression<Func<TEntity, bool>> predicate, bool tracking = true);
         Task<TEntity> GetSingleAsync(Expression<Func<TEntity, bool>> predicate, bool tracking = true);
         Task<TEntity> GetByIdAsync(string id, bool tracking = true);
+        IQueryable<TEntity> Query();
     }
 }

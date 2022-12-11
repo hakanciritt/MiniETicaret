@@ -2,6 +2,7 @@
 using ETicaret.Domain.Entities.Common;
 using ETicaret.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace ETicaret.Persistence.Repositories
@@ -50,6 +51,11 @@ namespace ETicaret.Persistence.Repositories
 
             return await query.FirstOrDefaultAsync(predicate);
 
+        }
+
+        public IQueryable<TEntity> Query()
+        {
+            return DbSet.AsQueryable();
         }
     }
 }
