@@ -73,6 +73,7 @@ namespace ETicaret.Persistence
                     options.Password.RequireUppercase = false;
 
                 }).AddEntityFrameworkStores<ETicaretDbContext>()
+                .AddDefaultTokenProviders()
                 .AddDefaultTokenProviders();
 
         }
