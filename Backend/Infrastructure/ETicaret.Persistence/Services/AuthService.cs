@@ -2,6 +2,7 @@
 using ETicaret.Application.Abstractions.Token;
 using ETicaret.Application.DTOs;
 using ETicaret.Application.Exceptions;
+using ETicaret.Application.Helpers;
 using ETicaret.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
@@ -90,8 +91,7 @@ namespace ETicaret.Persistence.Services
             if (user is not null)
             {
                 string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
-                byte[] tokenBytes = Encoding.UTF8.GetBytes(resetToken);
-                resetToken = WebEncoders.Base64UrlEncode(tokenBytes);
+                resetToken = resetToken.UrlEncode();
 
                 await _mailService.SendPasswordResetMailAsync(user.Email, user.Id, resetToken);
 
@@ -109,6 +109,20 @@ namespace ETicaret.Persistence.Services
                 return token;
             }
             else throw new NotFoundUserException();
+        }
+
+        public async Task<bool> VerifyResetTokenAsync(string resetToken, string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user is null) return false;
+
+            resetToken = resetToken.UrlDecode();
+
+            return await _userManager.VerifyUserTokenAsync(
+                user,
+                _userManager.Options.Tokens.PasswordResetTokenProvider,
+                "ResetPassword",
+                resetToken);
         }
     }
 }

@@ -9,5 +9,8 @@ namespace ETicaret.Application.Abstractions.Services
         Task<CreateUserResponse> CreateAsync(CreateUserDto model);
         Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate);
         Task<List<AppUser>> GetAllUsers(PagedRequest pagination);
+        Task UpdatePassword(string userId, string resetToken, string newPassword);
+
+
     }
 }
