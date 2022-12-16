@@ -8,7 +8,7 @@ namespace ETicaret.Application.Features.Commands.AppUser.UpdatePassword
     {
         private readonly IUserService _userService;
 
-        public UpdatePasswordCommandHandler(IUserService userService )
+        public UpdatePasswordCommandHandler(IUserService userService)
         {
             _userService = userService;
         }
@@ -16,7 +16,7 @@ namespace ETicaret.Application.Features.Commands.AppUser.UpdatePassword
         {
             if (request.Password != request.PasswordConfirm) throw new UserFriendlyException("Lütfen şifreyi doğru girdiğinizden emin olunuz.");
 
-             await _userService.UpdatePassword(request.UserId, request.ResetToken, request.Password);
+            await _userService.UpdatePassword(request.UserId, request.ResetToken, request.Password);
 
             return new() { };
 

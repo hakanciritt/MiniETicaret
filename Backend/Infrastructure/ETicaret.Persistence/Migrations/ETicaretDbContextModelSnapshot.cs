@@ -135,6 +135,9 @@ namespace ETicaret.Persistence.Migrations
                     b.Property<DateTime>("CreateData")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("Lock")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
@@ -156,6 +159,9 @@ namespace ETicaret.Persistence.Migrations
 
                     b.Property<Guid>("BasketId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("BasketItemType")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreateData")
                         .HasColumnType("datetime2");

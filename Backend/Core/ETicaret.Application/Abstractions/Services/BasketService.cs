@@ -62,6 +62,7 @@ namespace ETicaret.Application.Abstractions.Services
             {
                 BasketStatus = Domain.Enums.Status.Active,
                 UserId = _userSession.GetUserId,
+                Lock = false,
                 BasketItems = new List<BasketItem>()
             };
 
@@ -76,6 +77,8 @@ namespace ETicaret.Application.Abstractions.Services
 
             if (basket != null)
             {
+                if (basket.Lock) throw new UserFriendlyException("Sipariş aşamasında olduğunuz için sepete ürün ekleyemezsiniz.");
+
                 var items = basket.BasketItems.ToList();
                 var product = await _productReadRepository.GetByIdAsync(basketItem.ProductId.ToString());
 
@@ -133,6 +136,7 @@ namespace ETicaret.Application.Abstractions.Services
                 Basket targetBasket = new()
                 {
                     BasketStatus = Domain.Enums.Status.Active,
+                    Lock = false,
                     UserId = userId,
                 };
 

@@ -8,6 +8,7 @@ namespace ETicaret.Domain.Entities
         public string? UserId { get; set; }
         public AppUser User { get; set; }
         public Status BasketStatus { get; set; }
+        public bool Lock { get; set; }
         public ICollection<BasketItem> BasketItems { get; set; }
     }
 }
