@@ -7,8 +7,9 @@ namespace ETicaret.Application.Abstractions.Services
 {
     public interface IOrderService
     {
-        Task CreateOrder(CreateOrderDto createOrder);
+        Task<Order> CreateOrder(CreateOrderDto createOrder);
         Task<List<OrderDto>> GetAllOrders(PagedRequest request);
         Task<Order> GetOrderById(string orderId);
+        Task CompleteOrderAsync(string id);
     }
 }

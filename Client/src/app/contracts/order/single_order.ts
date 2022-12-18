@@ -5,7 +5,7 @@ export class SingleOrder
     address:string;
     createdDate : Date;
     orderNo : string;
-    orderStatus:any;
+    orderStatus:number;
     totalPrice : string;
     user : User;
     orderItems : OrderItem[];

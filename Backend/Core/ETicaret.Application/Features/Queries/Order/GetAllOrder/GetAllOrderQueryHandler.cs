@@ -20,7 +20,8 @@ namespace ETicaret.Application.Features.Queries.Order.GetAllOrder
                 CreatedDate = c.CreateData,
                 OrderNo = c.OrderNo,
                 TotalPrice = c.TotalPrice,
-                UserName = c.User.UserName
+                UserName = c.User.UserName,
+                OrderStatus = c.OrderStatus
             }).ToList();
 
             return new GetAllOrderQueryResponse

@@ -21,26 +21,33 @@ export class OrderService {
   }
 
   async getAllOrders(page: number = 0, size: number = 5, successCallBack?: () => void, errorCallBack?: (errorMessage: string) => void):
-  Promise<{ totalOrderCount: number, orders: List_Order[] }> {
+    Promise<{ totalOrderCount: number, orders: List_Order[] }> {
     const observable: Observable<{ totalOrderCount: number, orders: List_Order[] }> = this.httpClientService.get({
       controller: "orders",
       queryString: `page=${page}&size=${size}`
     });
-    const promiseRes =  firstValueFrom(observable);
-    promiseRes.then(value =>successCallBack())
-    .catch(err => errorCallBack(err));
+    const promiseRes = firstValueFrom(observable);
+    promiseRes.then(value => successCallBack())
+      .catch(err => errorCallBack(err));
     return await promiseRes;
   }
 
-  async getOrderById(id:string,successCallBack?: () => void, errorCallBack?: (errorMessage: string) => void){
-    const observable : Observable<SingleOrder> = this.httpClientService.get<SingleOrder>({
-      controller : "orders",
-
-    },id);
+  async getOrderById(id: string, successCallBack?: () => void, errorCallBack?: (errorMessage: string) => void) {
+    const observable: Observable<SingleOrder> = this.httpClientService.get<SingleOrder>({
+      controller: "orders",
+    }, id);
 
     const promiseData = firstValueFrom(observable);
-    promiseData.then(value =>successCallBack()).catch(err =>errorCallBack(err));
+    promiseData.then(value => successCallBack()).catch(err => errorCallBack(err));
     return await promiseData;
+  }
+
+  async completeOrder(id: string) {
+    const obser: Observable<any> = this.httpClientService.get({
+      controller: "orders",
+      action: "complete-order"
+    }, id);
+    await firstValueFrom(obser);
   }
 
 }

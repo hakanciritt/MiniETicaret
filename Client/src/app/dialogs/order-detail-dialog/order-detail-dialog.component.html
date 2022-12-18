@@ -48,5 +48,6 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Kapat</button>
-    <button mat-button [mat-dialog-close]="data">Sipariş Tamamla</button>
+    <button mat-button [mat-dialog-close]="data" *ngIf="order.orderStatus!=3" (click)="completeOrder()">Sipariş
+        Tamamla</button>
 </mat-dialog-actions>

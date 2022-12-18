@@ -29,7 +29,8 @@ namespace ETicaret.Persistence.Services
             _userSession = userSession;
             _orderReadRepository = orderReadRepository;
         }
-        public async Task CreateOrder(CreateOrderDto createOrder)
+
+        public async Task<Order> CreateOrder(CreateOrderDto createOrder)
         {
             var userBasket = await _basketReadRepository.DbSet.Include(d => d.BasketItems)
                     .FirstOrDefaultAsync(d =>
@@ -62,8 +63,12 @@ namespace ETicaret.Persistence.Services
             }
             await _orderWriteRepository.AddAsync(order);
 
-            userBasket.BasketStatus = Domain.Enums.Status.Passive;
+            //sepet kilitlendi 
+            //todo daha global bir yerden yönetilebilir.
+            userBasket.Lock = true;
             await _orderWriteRepository.SaveAsync();
+
+            return order;
         }
 
         public async Task<List<OrderDto>> GetAllOrders(PagedRequest request)
@@ -98,6 +103,21 @@ namespace ETicaret.Persistence.Services
                 .FirstOrDefaultAsync(c => c.Id == Guid.Parse(orderId));
             if (order is null) throw new UserFriendlyException("Sipariş bulunamadı.");
             return order;
+        }
+        public async Task CompleteOrderAsync(string id)
+        {
+            var order = await _orderReadRepository.Query()
+                .Include(c => c.OrderItems)
+                .Where(c => c.Id == Guid.Parse(id)).FirstOrDefaultAsync();
+
+            if (order is null) throw new UserFriendlyException("Sipariş bulunamadı.");
+
+            order.OrderStatus = Domain.Enums.OrderStatus.Completed;
+            var basket = await _basketReadRepository.GetByIdAsync(order.BasketId.Value.ToString());
+            basket.BasketStatus = Domain.Enums.Status.Passive;
+            basket.Lock = true;
+
+            await _orderWriteRepository.SaveAsync();
         }
     }
 }

@@ -16,14 +16,17 @@ namespace ETicaret.Application.Features.Commands.Order.CreateOrder
         }
         public async Task<CreateOrderCommandResponse> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
         {
-            await _orderService.CreateOrder(new ViewModels.Orders.CreateOrderDto()
+            var orderResult = await _orderService.CreateOrder(new ViewModels.Orders.CreateOrderDto()
             {
                 Address = request.Address,
                 Description = request.Description,
             });
 
             await _orderHubService.OrderAddedMessageAsync("Heyy, yeni bir siparişimiz var.");
-            return new();
+            return new()
+            {
+                OrderId = orderResult.Id.ToString()
+            };
         }
     }
 }
