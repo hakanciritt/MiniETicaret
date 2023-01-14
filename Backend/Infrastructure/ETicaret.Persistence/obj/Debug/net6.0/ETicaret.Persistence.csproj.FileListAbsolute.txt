@@ -17,6 +17,11 @@ C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\ET
 C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.pdb
 C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.genruntimeconfig.cache
 C:\Users\hakan\OneDrive\Masaüstü\ETicaretUygulamasi\ETicaret\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ref\ETicaret.Persistence.dll
+C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.csproj.AssemblyReference.cache
+C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.AssemblyInfoInputs.cache
+C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.AssemblyInfo.cs
+C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.csproj.CoreCompileInputs.cache
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\bin\Debug\net6.0\ETicaret.Persistence.deps.json
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\bin\Debug\net6.0\ETicaret.Persistence.runtimeconfig.json
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\bin\Debug\net6.0\ETicaret.Persistence.dll
@@ -25,11 +30,6 @@ C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\bin\Debug\net6.0\ETicaret.Domain.dll
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\bin\Debug\net6.0\ETicaret.Application.pdb
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\bin\Debug\net6.0\ETicaret.Domain.pdb
-C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.csproj.AssemblyReference.cache
-C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.AssemblyInfoInputs.cache
-C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.AssemblyInfo.cs
-C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.csproj.CoreCompileInputs.cache
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.csproj.CopyComplete
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\ETicaret.Persistence.dll
 C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Infrastructure\ETicaret.Persistence\obj\Debug\net6.0\refint\ETicaret.Persistence.dll

@@ -3,7 +3,6 @@ using ETicaret.Application.Abstractions.Services.Authentications;
 using ETicaret.Application.Repositories;
 using ETicaret.Application.Repositories.Basket;
 using ETicaret.Application.Repositories.BasketItem;
-using ETicaret.Application.Repositories.CustomerRepository;
 using ETicaret.Application.Repositories.OrderRepository;
 using ETicaret.Application.Repositories.ProductRepository;
 using ETicaret.Domain.Entities;
@@ -12,7 +11,6 @@ using ETicaret.Persistence.Contexts;
 using ETicaret.Persistence.Repositories;
 using ETicaret.Persistence.Repositories.BasketItemRepository;
 using ETicaret.Persistence.Repositories.BasketRepository;
-using ETicaret.Persistence.Repositories.CustomerRepository;
 using ETicaret.Persistence.Repositories.OrderRepository;
 using ETicaret.Persistence.Repositories.ProductRepository;
 using ETicaret.Persistence.Services;
@@ -27,9 +25,6 @@ namespace ETicaret.Persistence
         public static void AddPersistenceServices(this IServiceCollection services)
         {
             services.AddDbContext<ETicaretDbContext>(options => options.UseSqlServer(Configuration.ConnectionString));
-
-            services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
-            services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
 
             services.AddScoped<IProductReadRepository, ProductReadRepository>();
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
