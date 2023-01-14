@@ -1,4 +1,5 @@
 ﻿using ETicaret.Domain.Entities.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ETicaret.Domain.Entities
 {
@@ -10,6 +11,6 @@ namespace ETicaret.Domain.Entities
         public string? Description { get; set; }
 
         public Guid? MetaContentId { get; set; }
-        public MetaContent MetaContent { get; set; }
+        [ForeignKey(nameof(MetaContentId))] public MetaContent MetaContent { get; set; }
     }
 }
