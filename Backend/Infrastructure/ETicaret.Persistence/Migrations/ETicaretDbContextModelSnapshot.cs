@@ -22,6 +22,21 @@ namespace ETicaret.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("CategoryProduct", b =>
+                {
+                    b.Property<Guid>("CategoriesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("CategoriesId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("ProductCategories", (string)null);
+                });
+
             modelBuilder.Entity("ETicaret.Domain.Entities.AppRole", b =>
                 {
                     b.Property<string>("Id")
@@ -148,7 +163,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Baskets", (string)null);
+                    b.ToTable("Baskets");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.BasketItem", b =>
@@ -184,7 +199,40 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("BasketItems", (string)null);
+                    b.ToTable("BasketItems");
+                });
+
+            modelBuilder.Entity("ETicaret.Domain.Entities.Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateData")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("MainCategoryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("TextContentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainCategoryId");
+
+                    b.HasIndex("TextContentId");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.Common.OrderItem", b =>
@@ -220,7 +268,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderItems", (string)null);
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.File", b =>
@@ -250,7 +298,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Files", (string)null);
+                    b.ToTable("Files");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("File");
                 });
@@ -270,6 +318,9 @@ namespace ETicaret.Persistence.Migrations
                     b.Property<string>("MetaKeywords")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("TextContentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -278,7 +329,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MetaContent", (string)null);
+                    b.ToTable("MetaContents");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.Order", b =>
@@ -321,7 +372,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.Product", b =>
@@ -336,6 +387,9 @@ namespace ETicaret.Persistence.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("OriginalPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -353,7 +407,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasIndex("TextContentId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.TextContent", b =>
@@ -387,7 +441,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasIndex("MetaContentId");
 
-                    b.ToTable("TextContent", (string)null);
+                    b.ToTable("TextContents");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -508,7 +562,7 @@ namespace ETicaret.Persistence.Migrations
 
                     b.HasIndex("ProductsId");
 
-                    b.ToTable("ProductProductImageFile", (string)null);
+                    b.ToTable("ProductProductImageFile");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.InvoiceFile", b =>
@@ -529,6 +583,21 @@ namespace ETicaret.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasDiscriminator().HasValue("ProductImageFile");
+                });
+
+            modelBuilder.Entity("CategoryProduct", b =>
+                {
+                    b.HasOne("ETicaret.Domain.Entities.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ETicaret.Domain.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.Basket", b =>
@@ -557,6 +626,21 @@ namespace ETicaret.Persistence.Migrations
                     b.Navigation("Basket");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ETicaret.Domain.Entities.Category", b =>
+                {
+                    b.HasOne("ETicaret.Domain.Entities.Category", "MainCategory")
+                        .WithMany()
+                        .HasForeignKey("MainCategoryId");
+
+                    b.HasOne("ETicaret.Domain.Entities.TextContent", "TextContent")
+                        .WithMany()
+                        .HasForeignKey("TextContentId");
+
+                    b.Navigation("MainCategory");
+
+                    b.Navigation("TextContent");
                 });
 
             modelBuilder.Entity("ETicaret.Domain.Entities.Common.OrderItem", b =>

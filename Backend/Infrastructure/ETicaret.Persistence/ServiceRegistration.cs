@@ -55,6 +55,7 @@ namespace ETicaret.Persistence
 
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IProductService, ProductService>();
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));

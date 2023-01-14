@@ -10,7 +10,6 @@ namespace ETicaret.Persistence.Contexts
     public class ETicaretDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
         public ETicaretDbContext(DbContextOptions<ETicaretDbContext> options) : base(options) { }
-
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
@@ -19,15 +18,23 @@ namespace ETicaret.Persistence.Contexts
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
-
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<TextContent> TextContents { get; set; }
+        public DbSet<MetaContent> MetaContents { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>().HasKey(d => d.Id);
             builder.Entity<Basket>().HasKey(d => d.Id);
+            builder.Entity<Product>()
+                .HasMany(d => d.Categories)
+                .WithMany(d => d.Products)
+                .UsingEntity(x =>
+                {
+                    x.ToTable("ProductCategories");
+                });
 
             base.OnModelCreating(builder);
         }
-
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             IEnumerable<EntityEntry> entities = ChangeTracker.Entries<BaseEntity>();

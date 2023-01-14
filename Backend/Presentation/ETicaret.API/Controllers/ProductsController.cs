@@ -17,7 +17,7 @@ namespace ETicaret.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = Schemes.AdminScheme)]
+    //[Authorize(AuthenticationSchemes = Schemes.AdminScheme)]
     public class ProductsController : ControllerBase
     {
         private readonly IProductImageFileWriteRepository _productImageWriteRepository;

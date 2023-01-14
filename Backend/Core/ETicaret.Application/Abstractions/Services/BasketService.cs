@@ -1,23 +1,16 @@
-﻿using System.Security.Claims;
-using ETicaret.Application.Exceptions;
+﻿using ETicaret.Application.Exceptions;
 using ETicaret.Application.Repositories.Basket;
 using ETicaret.Application.Repositories.BasketItem;
-using ETicaret.Application.Repositories.OrderRepository;
 using ETicaret.Application.Repositories.ProductRepository;
 using ETicaret.Application.UserSession;
 using ETicaret.Application.ViewModels.Baskets;
 using ETicaret.Domain.Entities;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace ETicaret.Application.Abstractions.Services
 {
     public class BasketService : IBasketService
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly UserManager<AppUser> _userManager;
-        private readonly IOrderReadRepository _orderReadRepository;
         private readonly IBasketWriteRepository _basketWriteRepository;
         private readonly IBasketReadRepository _basketReadRepository;
         private readonly IBasketItemReadRepository _basketItemReadRepository;
@@ -25,17 +18,13 @@ namespace ETicaret.Application.Abstractions.Services
         private readonly IUserSession _userSession;
         private readonly IProductReadRepository _productReadRepository;
 
-        public BasketService(IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager,
-            IOrderReadRepository orderReadRepository,
-            IBasketWriteRepository basketWriteRepository,
+        public BasketService(IBasketWriteRepository basketWriteRepository,
             IBasketReadRepository basketReadRepository,
             IBasketItemReadRepository basketItemReadRepository,
             IBasketItemWriteRepository basketItemWriteRepository,
             IUserSession userSession, IProductReadRepository productReadRepository)
         {
-            _httpContextAccessor = httpContextAccessor;
-            _userManager = userManager;
-            _orderReadRepository = orderReadRepository;
+
             _basketWriteRepository = basketWriteRepository;
             _basketReadRepository = basketReadRepository;
             _basketItemReadRepository = basketItemReadRepository;
