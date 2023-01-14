@@ -5,9 +5,7 @@ using ETicaret.Application.Helpers;
 using ETicaret.Application.ViewModels;
 using ETicaret.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
-using System.Text;
 
 namespace ETicaret.Persistence.Services
 {

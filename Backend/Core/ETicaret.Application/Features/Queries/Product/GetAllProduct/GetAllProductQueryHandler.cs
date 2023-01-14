@@ -1,4 +1,5 @@
-﻿using ETicaret.Application.Repositories.ProductRepository;
+﻿using ETicaret.Application.Helpers;
+using ETicaret.Application.Repositories.ProductRepository;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +8,7 @@ namespace ETicaret.Application.Features.Queries.Product.GetAllProduct
     public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, GetAllProductQueryResponse>
     {
         private readonly IProductReadRepository _productReadRepository;
-        public GetAllProductQueryHandler(IProductReadRepository productReadRepository )
+        public GetAllProductQueryHandler(IProductReadRepository productReadRepository)
         {
             _productReadRepository = productReadRepository;
         }
@@ -15,7 +16,11 @@ namespace ETicaret.Application.Features.Queries.Product.GetAllProduct
         {
             int totalProductCount = await _productReadRepository.GetAll(false).CountAsync();
 
-            var products = await _productReadRepository.GetAll(false).Skip(request.Page * request.Size).Take(request.Size)
+            request.Keyword = request.Keyword?.Trim();
+
+            var products = await _productReadRepository.GetAll(false)
+              .WhereIf(!string.IsNullOrEmpty(request.Keyword), d => d.Name.Contains(request.Keyword))
+              .PageBy(request.Page, request.Size)
                 .Select(d => new
                 {
                     Id = d.Id,
@@ -25,6 +30,7 @@ namespace ETicaret.Application.Features.Queries.Product.GetAllProduct
                     CreatedDate = d.CreateData,
                     UpdatedDate = d.UpdatedDate
                 }).ToListAsync();
+
             return new() { Products = products, TotalCount = totalProductCount };
         }
     }

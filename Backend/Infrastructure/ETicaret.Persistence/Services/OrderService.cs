@@ -1,6 +1,7 @@
 ﻿using ETicaret.Application.Abstractions.Services;
 using ETicaret.Application.DTOs.Order;
 using ETicaret.Application.Exceptions;
+using ETicaret.Application.Helpers;
 using ETicaret.Application.Repositories.Basket;
 using ETicaret.Application.Repositories.OrderRepository;
 using ETicaret.Application.UserSession;
@@ -74,11 +75,12 @@ namespace ETicaret.Persistence.Services
         public async Task<List<OrderDto>> GetAllOrders(PagedRequest request)
         {
             //todo: mapleme işlemleri için automapper kurulacak.
-            return await _orderReadRepository.DbSet.
-                 Include(c => c.User)
+
+            return await _orderReadRepository.DbSet
+                .Include(c => c.User)
                  .Include(d => d.OrderItems)
+                 .PageBy(request.Page, request.Size)
                  .OrderByDescending(c => c.CreateData)
-                 .Skip(request.Page * request.Size).Take(request.Size)
                  .Select(d => new OrderDto()
                  {
                      Id = d.Id,

@@ -24263,3 +24263,251 @@ SELECT [MigrationId], [ProductVersion]
 FROM [__EFMigrationsHistory]
 ORDER BY [MigrationId];
 2023-01-14 17:30:31.768 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-01-14 21:13:13.525 +03:00 [INF] User profile is available. Using 'C:\Users\hakan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-14 21:13:14.312 +03:00 [INF] Now listening on: https://localhost:7145
+2023-01-14 21:13:14.314 +03:00 [INF] Now listening on: http://localhost:5145
+2023-01-14 21:13:14.318 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 21:13:14.320 +03:00 [INF] Hosting environment: Development
+2023-01-14 21:13:14.321 +03:00 [INF] Content root path: C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\
+2023-01-14 21:13:18.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger - -
+2023-01-14 21:13:18.564 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger - - - 301 0 - 346.9422ms
+2023-01-14 21:13:18.646 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/index.html - -
+2023-01-14 21:13:19.247 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/index.html - - - 200 - text/html;charset=utf-8 600.7099ms
+2023-01-14 21:13:19.374 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/swagger-ui.css - -
+2023-01-14 21:13:19.376 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - -
+2023-01-14 21:13:19.376 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/swagger-ui-standalone-preset.js - -
+2023-01-14 21:13:19.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/swagger-ui-bundle.js - -
+2023-01-14 21:13:19.387 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 10.9574ms
+2023-01-14 21:13:19.585 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-14 21:13:19.585 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-14 21:13:19.587 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/swagger-ui.css - - - 200 143632 text/css 213.7831ms
+2023-01-14 21:13:19.592 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 215.6654ms
+2023-01-14 21:13:19.607 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-14 21:13:19.610 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 233.1419ms
+2023-01-14 21:13:19.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - -
+2023-01-14 21:13:20.071 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 358.3285ms
+2023-01-14 21:13:20.324 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - -
+2023-01-14 21:13:20.523 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/favicon-32x32.png - -
+2023-01-14 21:13:20.538 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-01-14 21:13:20.570 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/favicon-32x32.png - - - 200 628 image/png 47.1677ms
+2023-01-14 21:13:48.111 +03:00 [INF] User profile is available. Using 'C:\Users\hakan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-14 21:13:48.588 +03:00 [INF] Now listening on: https://localhost:7145
+2023-01-14 21:13:48.590 +03:00 [INF] Now listening on: http://localhost:5145
+2023-01-14 21:13:48.595 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 21:13:48.596 +03:00 [INF] Hosting environment: Development
+2023-01-14 21:13:48.597 +03:00 [INF] Content root path: C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\
+2023-01-14 21:13:49.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/index.html - -
+2023-01-14 21:13:50.118 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/index.html - - - 200 - text/html;charset=utf-8 475.2173ms
+2023-01-14 21:13:50.210 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - -
+2023-01-14 21:13:50.216 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 6.4322ms
+2023-01-14 21:13:50.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - -
+2023-01-14 21:13:50.343 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.8410ms
+2023-01-14 21:13:50.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - -
+2023-01-14 21:13:51.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 327.5902ms
+2023-01-14 21:14:01.044 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/Products - -
+2023-01-14 21:14:01.084 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2023-01-14 21:14:01.133 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2023-01-14 21:14:03.091 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'BasketItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:14:03.094 +03:00 [WRN] No store type was specified for the decimal property 'Discount' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:14:03.095 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:14:03.097 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:14:03.099 +03:00 [WRN] No store type was specified for the decimal property 'Discount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:14:03.100 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:14:03.102 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:14:03.411 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2023-01-14 21:14:04.298 +03:00 [INF] Executed DbCommand (196ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2023-01-14 21:14:10.598 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-14 21:14:10.601 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-14 21:14:10.745 +03:00 [INF] Executed DbCommand (90ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-01-14 21:14:10.760 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ETicaret.Persistence.Contexts.ETicaretDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](AAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:4a07252c-32c8-4faf-af32-802944a7fb0f
+Error Number:10742,State:1,Class:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](AAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:4a07252c-32c8-4faf-af32-802944a7fb0f
+Error Number:10742,State:1,Class:15
+2023-01-14 21:14:10.980 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 9837.4905ms
+2023-01-14 21:14:10.985 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2023-01-14 21:14:11.169 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](AAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryHandler.Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken) in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Core\ETicaret.Application\Features\Queries\Product\GetAllProduct\GetAllProductQueryHandler.cs:line 19
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ETicaret.API.Controllers.ProductsController.GetAll(GetAllProductQueryRequest request) in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\Controllers\ProductsController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\Program.cs:line 134
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+ClientConnectionId:4a07252c-32c8-4faf-af32-802944a7fb0f
+Error Number:10742,State:1,Class:15
+2023-01-14 21:14:11.269 +03:00 [ERR] The offset specified in a OFFSET clause may not be negative.
+2023-01-14 21:14:11.308 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/Products - - - 500 - application/json;+charset=utf-8 10263.1265ms
+2023-01-14 21:14:25.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/Products - -
+2023-01-14 21:14:25.177 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2023-01-14 21:14:25.179 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2023-01-14 21:14:25.236 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2023-01-14 21:14:25.242 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2023-01-14 21:14:34.774 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-01-14 21:14:34.801 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ETicaret.Persistence.Contexts.ETicaretDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](AAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:4a07252c-32c8-4faf-af32-802944a7fb0f
+Error Number:10742,State:1,Class:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](AAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:4a07252c-32c8-4faf-af32-802944a7fb0f
+Error Number:10742,State:1,Class:15
+2023-01-14 21:14:34.962 +03:00 [INF] Executed action ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API) in 9780.8229ms
+2023-01-14 21:14:34.963 +03:00 [INF] Executed endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2023-01-14 21:14:35.059 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](AAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryHandler.Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken) in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Core\ETicaret.Application\Features\Queries\Product\GetAllProduct\GetAllProductQueryHandler.cs:line 19
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at ETicaret.API.Controllers.ProductsController.GetAll(GetAllProductQueryRequest request) in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\Controllers\ProductsController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\Program.cs:line 134
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+ClientConnectionId:4a07252c-32c8-4faf-af32-802944a7fb0f
+Error Number:10742,State:1,Class:15
+2023-01-14 21:14:35.080 +03:00 [ERR] The offset specified in a OFFSET clause may not be negative.
+2023-01-14 21:14:35.082 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/api/Products - - - 500 - application/json;+charset=utf-8 9908.8263ms
+2023-01-14 21:15:52.950 +03:00 [INF] User profile is available. Using 'C:\Users\hakan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-14 21:15:53.332 +03:00 [INF] Now listening on: https://localhost:7145
+2023-01-14 21:15:53.333 +03:00 [INF] Now listening on: http://localhost:5145
+2023-01-14 21:15:53.338 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 21:15:53.339 +03:00 [INF] Hosting environment: Development
+2023-01-14 21:15:53.340 +03:00 [INF] Content root path: C:\Users\hakan\OneDrive\Masaüstü\MiniETicaret\Backend\Presentation\ETicaret.API\
+2023-01-14 21:15:54.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/index.html - -
+2023-01-14 21:15:55.027 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/index.html - - - 200 - text/html;charset=utf-8 407.8324ms
+2023-01-14 21:15:55.095 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - -
+2023-01-14 21:15:55.102 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.4799ms
+2023-01-14 21:15:55.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - -
+2023-01-14 21:15:55.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 75.7996ms
+2023-01-14 21:15:55.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - -
+2023-01-14 21:15:55.688 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 247.6826ms
+2023-01-14 21:16:01.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7145/api/Products - -
+2023-01-14 21:16:01.580 +03:00 [INF] Executing endpoint 'ETicaret.API.Controllers.ProductsController.GetAll (ETicaret.API)'
+2023-01-14 21:16:01.622 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ETicaret.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller ETicaret.API.Controllers.ProductsController (ETicaret.API).
+2023-01-14 21:16:03.379 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'BasketItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:16:03.382 +03:00 [WRN] No store type was specified for the decimal property 'Discount' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:16:03.383 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:16:03.385 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'InvoiceFile'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:16:03.386 +03:00 [WRN] No store type was specified for the decimal property 'Discount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:16:03.388 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:16:03.391 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-01-14 21:16:03.683 +03:00 [INF] Entity Framework Core 6.0.4 initialized 'ETicaretDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+2023-01-14 21:16:04.276 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+2023-01-14 21:16:07.596 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-14 21:16:07.599 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-14 21:16:07.787 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-01-14 21:16:15.812 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Stock], [p].[Price], [p].[CreateData] AS [CreatedDate], [p].[UpdatedDate]
+FROM [Products] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
