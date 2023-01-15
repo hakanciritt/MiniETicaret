@@ -1,4 +1,7 @@
-﻿namespace ETicaret.Application.Helpers
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
+
+namespace ETicaret.Application.Helpers
 {
     public static class QueryExtensions
     {
@@ -16,6 +19,12 @@
         {
             pageSize = pageSize <= 0 ? 0 : pageSize - 1;
             return query.Skip(pageSize * skipCount).Take(skipCount);
+        }
+
+        public static IQueryable<T> IncludeIf<T, TProperty>(this IQueryable<T> source, bool condition, 
+            Expression<Func<T, TProperty>> path) where T : class
+        {
+            return condition ? source.Include(path) : source;
         }
     }
 }
